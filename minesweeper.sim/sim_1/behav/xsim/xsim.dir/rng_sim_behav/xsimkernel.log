@@ -2,3 +2,6 @@ Running: xsim.dir/rng_sim_behav/xsimk.exe -simmode gui -wdb rng_sim_behav.wdb -s
 Design successfully loaded
 Design Loading Memory Usage: 8360 KB (Peak: 8360 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8848 KB (Peak: 8848 KB)
+Simulation CPU Usage: 0 ms
