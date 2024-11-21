@@ -7,7 +7,9 @@ use UNISIM.vcomponents.all;
 entity render is
 	port(
 		clk:   in    std_logic;
-		tx:    out   std_logic;
+		rx:   in     std_logic;
+        tx:   out    std_logic;
+        key:  inout  std_logic_vector(7 downto 1);
 		red:   out   std_logic_vector(1 downto 0);
 		green: out   std_logic_vector(1 downto 0);
 		blue:  out   std_logic_vector(1 downto 0);
@@ -23,7 +25,7 @@ architecture arch of render is
 	signal vcount:   unsigned(9 downto 0);
 	signal blank:    std_logic;
 	signal frame:    std_logic;
-    type StateType: (WELCOME, GAME, DONE);
+    type StateType is (WELCOME, GAME, DONE);
     signal fsm: StateType := WELCOME;
 	component minesweeper_ram is
 		port(
@@ -39,8 +41,23 @@ architecture arch of render is
 			datab_o: out std_logic_vector(35 downto 0)
 		);
 	end component;
+	component ms_keypad is
+	port(
+        clk:  in    std_logic;
+        rx:   in    std_logic;
+        tx:   out   std_logic;
+        key:  inout std_logic_vector(7 downto 1);
+        data_o: out std_logic_vector(11 downto 0);
+        );
+	end component
+	
+	signal user_input: std_logic_vector(11 downto 0);
+	type ms_color_map is array(0 to 639, 0 to 479) of std_logic_vector(5 downto 0);
+	signal screen: ms_color_map;
 begin
 	tx<='1';
+
+
 
 	------------------------------------------------------------------
 	-- Clock management tile
@@ -121,6 +138,12 @@ begin
 		CLKFBIN=>clkfb  -- 1-bit input: Feedback clock
 	);
 
+	keypad: ms_keypad port map (
+		clk => clk, rx=>rx, tx=>tx,
+		key => key,
+		data_o => user_input
+	)
+
 	------------------------------------------------------------------
 	-- VGA display counters
 	--
@@ -176,14 +199,11 @@ begin
 		end if;
 	end process;
 
-    
-
     process(clkfx)
     begin
         case fsm is
 
             when WELCOME =>
-				
 
             when GAME =>
 
@@ -208,8 +228,8 @@ begin
 	------------------------------------------------------------------
 	-- VGA output with blanking
 	------------------------------------------------------------------
-	red<=b"00" when blank='1' else b"11";
-	green<=b"00" when blank='1' else b"11";
-	blue<=b"00" when blank='1' else b"11";
+	red<=b"00" when blank='1' else screen(hcount, vcount)(5 downto 4);
+	green<=b"00" when blank='1' else screen(hcount, vcount)(3 downto 2);
+	blue<=b"00" when blank='1' else screen(hcount, vcount)(1 downto 0);
 
 end arch;
