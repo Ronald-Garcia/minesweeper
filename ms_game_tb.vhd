@@ -37,9 +37,8 @@ architecture arch of ms_game_tb is
 		port(
         clk :     in  std_logic; -- Clock signal
         reset :   in  std_logic; -- Reset signal
-        cursor_x: in  natural;
-        cursor_y: in  natural;
-        win:      out std_logic_vector(1 downto 0)
+        win:      out std_logic_vector(1 downto 0);
+        button_map: in std_logic_vector(11 downto 0)
         );
 	end component;
 	-- Local constants and signals
@@ -49,6 +48,8 @@ architecture arch of ms_game_tb is
 	signal clock_i:  std_logic;
 	signal reset_i:  std_logic;
 	signal win_o: std_logic_vector(1 downto 0);
+	signal x: std_logic_vector(2 downto 0) := (others => '0');
+	signal button_map_i: std_logic_vector(11 downto 0);
 begin
 	------------------------------------------------------------------
 	-- rng instantiation                                        --
@@ -57,9 +58,8 @@ begin
 		port map(
 			clk=>clock_i,-- Input clock
 			reset=>reset_i,-- Asynchronous reset
-			cursor_x=>0,  -- Synchronous load
-			cursor_y=>0,  -- Synchronous load
-			win=>win_o    -- Start count
+			win=>win_o,    -- Start count
+			button_map=>button_map_i
 		);
 
 	------------------------------------------------------------------
@@ -267,5 +267,8 @@ begin
 		sim_clock(clock_i,tstep);
 		wait;
 	end process;
+
+	
+	
 	
 end arch;

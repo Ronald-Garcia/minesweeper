@@ -59,6 +59,7 @@ begin
                     if counter = SCAN_INTERVAL/2 then
                         vertical_inputs <= key(3 downto 1);
                         -- Map to GUI data bits for row 1 (1,2,3)
+                        
                         data_o(11) <= not vertical_inputs(3); -- Key 1
                         data_o(10) <= not vertical_inputs(2); -- Key 2
                         data_o(9) <= not vertical_inputs(1);  -- Key 3
