@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log render.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source render.tcl
+EAStep vivado -log ms_game.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ms_game.tcl

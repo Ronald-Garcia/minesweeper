@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1732243932">
-  <File Type="PA-TCL" Name="render.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="render_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="render_reports.tcl"/>
-  <File Type="RDS-RDS" Name="render.vds"/>
-  <File Type="RDS-UTIL" Name="render_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="render_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="render.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="render_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="render_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1732397865">
+  <File Type="PA-TCL" Name="ms_game.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ms_game_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ms_game_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ms_game.vds"/>
+  <File Type="RDS-UTIL" Name="ms_game_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ms_game_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ms_game.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ms_game_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ms_game_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/ms_keypad.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/render.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/rng.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/ms_game.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -44,7 +37,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/ms_game.vhd">
+    <File Path="$PPRDIR/ms_keypad.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -53,8 +46,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="render"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="ms_game"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
