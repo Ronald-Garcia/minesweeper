@@ -46,7 +46,7 @@ architecture arch of rng_sim is
 	constant initc: natural:=2;
 	constant tstep: time:=20 ns;
 	signal clock_i:  std_logic;
-	signal reset_i:  std_logic;
+	signal reset_i:  std_logic := '0';
 	signal seed_i:   std_logic_vector(7 downto 0);
 	signal random_o: std_logic_vector(7 downto 0);
 begin
@@ -67,17 +67,38 @@ begin
 	process
 	begin
 		clock_i<='1';
-		reset_i<='1';
 		seed_i <= b"00000001";
+		reset_i <='1';
 		sim_step(tstep);
 		reset_i<='0';
-		sim_step(tstep);
 		sim_clock(clock_i,tstep);
 		sim_clock(clock_i,tstep);
 		sim_clock(clock_i,tstep);
 		sim_clock(clock_i,tstep);
 		sim_clock(clock_i,tstep);
 		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+
 		wait;
 	end process;
 	

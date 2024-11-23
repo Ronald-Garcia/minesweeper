@@ -12,12 +12,12 @@ entity rng is
 end rng;
 
 architecture arch of rng is
-    signal cur_seed: std_logic_vector(7 downto 0) := seed_i;    
+    signal cur_seed: std_logic_vector(7 downto 0);
 begin
     process(clk_i)
         variable next_bit: std_logic;
     begin
-        if reset_i = '1' then            
+        if reset_i = '1' then
             cur_seed <= seed_i;
         elsif rising_edge(clk_i) then
             next_bit := cur_seed(7) xor cur_seed(5) xor cur_seed(4) xor cur_seed(3);

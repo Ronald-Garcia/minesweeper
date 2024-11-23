@@ -21,8 +21,8 @@ end render;
 architecture arch of render is
 	signal clkfb:    std_logic;
 	signal clkfx:    std_logic;
-	signal hcount:   unsigned(9 downto 0);
-	signal vcount:   unsigned(9 downto 0);
+	signal hcount:   natural;
+	signal vcount:   natural;
 	signal blank:    std_logic;
 	signal frame:    std_logic;
     type StateType is (WELCOME, GAME, DONE);
@@ -47,9 +47,9 @@ architecture arch of render is
         rx:   in    std_logic;
         tx:   out   std_logic;
         key:  inout std_logic_vector(7 downto 1);
-        data_o: out std_logic_vector(11 downto 0);
+        data_o: out std_logic_vector(11 downto 0)
         );
-	end component
+	end component;
 	
 	signal user_input: std_logic_vector(11 downto 0);
 	type ms_color_map is array(0 to 639, 0 to 479) of std_logic_vector(5 downto 0);
@@ -142,7 +142,7 @@ begin
 		clk => clk, rx=>rx, tx=>tx,
 		key => key,
 		data_o => user_input
-	)
+	);
 
 	------------------------------------------------------------------
 	-- VGA display counters
@@ -161,10 +161,10 @@ begin
 	begin
 		if rising_edge(clkfx) then
 			-- Pixel position counters
-			if (hcount>=to_unsigned(799,10)) then
-				hcount<=(others=>'0');
+			if (hcount>=799) then
+				hcount<=0;
 				if (vcount>=to_unsigned(524,10)) then
-					vcount<=(others=>'0');
+					vcount<=0;
 				else
 					vcount<=vcount+1;
 				end if;
@@ -172,26 +172,26 @@ begin
 				hcount<=hcount+1;
 			end if;
 			-- Sync, blank and frame
-			if (hcount>=to_unsigned(656,10)) and
-				(hcount<=to_unsigned(751,10)) then
+			if (hcount>=656) and
+				(hcount<=751) then
 				hsync<='0';
 			else
 				hsync<='1';
 			end if;
-			if (vcount>=to_unsigned(490,10)) and
-				(vcount<=to_unsigned(491,10)) then
+			if (vcount>=490) and
+				(vcount<=491) then
 				vsync<='0';
 			else
 				vsync<='1';
 			end if;
-			if (hcount>=to_unsigned(640,10)) or
-				(vcount>=to_unsigned(480,10)) then
+			if (hcount>=640) or
+				(vcount>=480) then
 				blank<='1';
 			else
 				blank<='0';
 			end if;
-			if (hcount=to_unsigned(640,10)) and
-				(vcount=to_unsigned(479,10)) then
+			if (hcount=640) and
+				(vcount=479) then
 				frame<='1';
 			else
 				frame<='0';

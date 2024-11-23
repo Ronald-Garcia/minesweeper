@@ -8,7 +8,7 @@ entity ms_keypad is
         rx:   in    std_logic;
         tx:   out   std_logic;
         key:  inout std_logic_vector(7 downto 1);
-        data_o: out std_logic_vector(11 downto 0);
+        data_o: out std_logic_vector(11 downto 0)
     );
 end ms_keypad;
 

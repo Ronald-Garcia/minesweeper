@@ -28,16 +28,18 @@ architecture arch of ms_game is
         );
 	end component;
 	signal cur_rand: std_logic_vector(7 downto 0) := (others => '0');
+	signal reset_rng: std_logic := '1';
 	signal cur_i: natural := 0;
 begin
 
     ms_rng: rng port map(
         clk_i => clk,
-        reset_i => '0',
-        seed_i => b"10010101",
+        reset_i => reset_rng,
+        seed_i => b"00000001",
         random_o => cur_rand
     );
     
+    reset_rng <= '0';    
     -- controls movement 
     process(clk) 
         variable enable: std_logic := '1';
@@ -46,14 +48,14 @@ begin
         if enable='0' then
                 
         elsif rising_edge(clk) then
-            if cur_rand > b"00001111" then
+            if cur_rand(4) = '1'  then
                 mine_map(cur_i) <= '1';
             else
                 mine_map(cur_i) <= '0';
             end if;
             
             if cur_i = 63 then
-                enable <= '0';
+                enable := '0';
             end if;
             cur_i <= cur_i + 1;
         end if;

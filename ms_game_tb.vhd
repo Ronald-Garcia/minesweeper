@@ -41,7 +41,7 @@ architecture arch of ms_game_tb is
         cursor_y: in  natural;
         win:      out std_logic_vector(1 downto 0)
         );
-	end ms_game;
+	end component;
 	-- Local constants and signals
 	constant nbits: natural:=3;
 	constant initc: natural:=2;
@@ -56,7 +56,7 @@ begin
 	num: ms_game
 		port map(
 			clk=>clock_i,-- Input clock
-			reset=>reset,-- Asynchronous reset
+			reset=>reset_i,-- Asynchronous reset
 			cursor_x=>0,  -- Synchronous load
 			cursor_y=>0,  -- Synchronous load
 			win=>win_o    -- Start count
@@ -72,6 +72,36 @@ begin
 		sim_step(tstep);
 		reset_i<='0';
 		sim_step(tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
+		sim_clock(clock_i,tstep);
 		sim_clock(clock_i,tstep);
 		sim_clock(clock_i,tstep);
 		sim_clock(clock_i,tstep);

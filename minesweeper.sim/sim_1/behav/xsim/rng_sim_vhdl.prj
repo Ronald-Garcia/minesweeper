@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../rng.vhd" \
-"../../../../rng_tb.vhd" \
-
-# Do not sort compile order
-nosort
