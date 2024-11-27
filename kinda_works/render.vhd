@@ -59,6 +59,93 @@ architecture behavioral of render is
         );
     end component;
 
+    -- Bomb ROM components
+    component bomb
+        port (
+            a   : in  std_logic_vector(11 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component bomb_rcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component bomb_gcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component bomb_bcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    -- Flag ROM components
+    component flag
+        port (
+            a   : in  std_logic_vector(11 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component flag_rcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component flag_gcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component flag_bcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    -- Add components for revealed number tiles
+    component num_0
+        port (
+            a   : in  std_logic_vector(11 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+    
+    component num_0_rcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+    
+    component num_0_gcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+    
+    component num_0_bcm
+        port (
+            a   : in  std_logic_vector(7 downto 0);
+            spo : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
     -- Board constants
     constant BOARD_SIZE : integer := 8;
     constant TILE_SIZE : integer := 48;
@@ -67,18 +154,14 @@ architecture behavioral of render is
     constant BORDER_THICKNESS : integer := 2;
     constant BORDER_COLOR : std_logic_vector(1 downto 0) := "11";
 
-    -- Color constants for revealed tiles (RGB format 2 bits each = 6 bits total)
-    constant NUM_1_COLOR : std_logic_vector(5 downto 0) := "000011"; -- Blue
-    constant NUM_2_COLOR : std_logic_vector(5 downto 0) := "001100"; -- Green
-    constant NUM_3_COLOR : std_logic_vector(5 downto 0) := "110000"; -- Red
-    constant NUM_4_COLOR : std_logic_vector(5 downto 0) := "000010"; -- Dark Blue
-    constant NUM_5_COLOR : std_logic_vector(5 downto 0) := "100000"; -- Dark Red
-    constant NUM_6_COLOR : std_logic_vector(5 downto 0) := "001111"; -- Cyan
-    constant NUM_7_COLOR : std_logic_vector(5 downto 0) := "110011"; -- Purple
-    constant NUM_8_COLOR : std_logic_vector(5 downto 0) := "010101"; -- Gray
-    constant FLAG_COLOR : std_logic_vector(5 downto 0) := "111100"; -- Yellow
-    constant BOMB_COLOR : std_logic_vector(5 downto 0) := "110000"; -- Red
-    constant EMPTY_COLOR : std_logic_vector(5 downto 0) := "111111"; -- White
+    signal bomb_pixel : std_logic_vector(7 downto 0);
+    signal bomb_red, bomb_green, bomb_blue : std_logic_vector(7 downto 0);
+    
+    signal flag_pixel : std_logic_vector(7 downto 0);
+    signal flag_red, flag_green, flag_blue : std_logic_vector(7 downto 0);
+
+    signal num_pixel : std_logic_vector(7 downto 0);
+    signal num_red, num_green, num_blue : std_logic_vector(7 downto 0);
 
     -- Display signals
     signal hcount : natural := 0;
@@ -121,6 +204,81 @@ begin
         port map (
             a   => tile_pixel,
             spo => blue_mapped
+        );
+
+    -- Bomb ROM instantiations
+    bomb_rom: bomb
+        port map (
+            a   => pixel_addr,
+            spo => bomb_pixel
+        );
+
+    bomb_r: bomb_rcm
+        port map (
+            a   => bomb_pixel,
+            spo => bomb_red
+        );
+
+    bomb_g: bomb_gcm
+        port map (
+            a   => bomb_pixel,
+            spo => bomb_green
+        );
+
+    bomb_b: bomb_bcm
+        port map (
+            a   => bomb_pixel,
+            spo => bomb_blue
+        );
+
+    -- Flag ROM instantiations
+    flag_rom: flag
+        port map (
+            a   => pixel_addr,
+            spo => flag_pixel
+        );
+
+    flag_r: flag_rcm
+        port map (
+            a   => flag_pixel,
+            spo => flag_red
+        );
+
+    flag_g: flag_gcm
+        port map (
+            a   => flag_pixel,
+            spo => flag_green
+        );
+
+    flag_b: flag_bcm
+        port map (
+            a   => flag_pixel,
+            spo => flag_blue
+        );
+
+    -- Number ROM instantiations
+    num_rom: num_0
+        port map (
+            a   => pixel_addr,
+            spo => num_pixel
+        );
+    
+    num_r: num_0_rcm
+        port map (
+            a   => num_pixel,
+            spo => num_red
+        );
+    
+    num_g: num_0_gcm
+        port map (
+            a   => num_pixel,
+            spo => num_green
+        );
+    
+    num_b: num_0_bcm
+        port map (
+            a   => num_pixel,
+            spo => num_blue
         );
 
     -- Clock management tile
@@ -232,7 +390,7 @@ begin
                     pixel_y := y_rel mod TILE_SIZE;
                     cell_index := tile_x + tile_y * 8;
 
-                    -- Calculate pixel address for ROM
+                    -- Calculate pixel address for all ROMs
                     pixel_addr <= std_logic_vector(to_unsigned(
                         pixel_x + pixel_y * TILE_SIZE,
                         12));
@@ -248,34 +406,27 @@ begin
                         blue  <= "00";
                     else
                         if flag_map_in(cell_index) = '1' then
-                            -- Show flag
-                            tile_color := FLAG_COLOR;
+                            -- Show flag sprite using flag ROM and color maps
+                            red   <= flag_red(7 downto 6);
+                            green <= flag_green(7 downto 6);
+                            blue  <= flag_blue(7 downto 6);
                         elsif reveal_map_in(cell_index) = '1' then
-                            -- Show revealed tile
                             if mine_map_in(cell_index) = '1' then
-                                tile_color := BOMB_COLOR;
+                                -- Show bomb sprite using bomb ROM and color maps
+                                red   <= bomb_red(7 downto 6);
+                                green <= bomb_green(7 downto 6);
+                                blue  <= bomb_blue(7 downto 6);
                             else
-                                -- Show number
-                                case number_map_in(cell_index) is
-                                    when 0 => tile_color := EMPTY_COLOR;
-                                    when 1 => tile_color := NUM_1_COLOR;
-                                    when 2 => tile_color := NUM_2_COLOR;
-                                    when 3 => tile_color := NUM_3_COLOR;
-                                    when 4 => tile_color := NUM_4_COLOR;
-                                    when 5 => tile_color := NUM_5_COLOR;
-                                    when 6 => tile_color := NUM_6_COLOR;
-                                    when 7 => tile_color := NUM_7_COLOR;
-                                    when others => tile_color := NUM_8_COLOR;
-                                end case;
+                                -- Show revealed tile using number ROM and color maps
+                                red   <= num_red(7 downto 6);
+                                green <= num_green(7 downto 6);
+                                blue  <= num_blue(7 downto 6);
                             end if;
-                            red   <= tile_color(5 downto 4);
-                            green <= tile_color(3 downto 2);
-                            blue  <= tile_color(1 downto 0);
                         else
-                            -- Show face-down tile using ROM
-                            red   <= red_mapped(5 downto 4);
-                            green <= green_mapped(3 downto 2);
-                            blue  <= blue_mapped(1 downto 0);
+                            -- Show face-down tile using face-down ROM and color maps
+                            red   <= red_mapped(7 downto 6);
+                            green <= green_mapped(7 downto 6);
+                            blue  <= blue_mapped(7 downto 6);
                         end if;
                     end if;
                 else
