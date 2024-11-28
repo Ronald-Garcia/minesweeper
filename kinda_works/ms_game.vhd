@@ -155,8 +155,6 @@ begin
                             mine_count := mine_count + 1;
                         end if;
                     end if;
-                    
-                    
                 else
                     mine_count := 9;
                 end if;
@@ -235,16 +233,17 @@ begin
                 if ms_init = IDLE then
                     -- First click - initialize game first
                     start_init <= '1';
-                elsif mine_map(cur_i) = '1' then
-                    -- Hit a mine - game over
-                    win <= b"00";
-                    reveal_map(cur_i) <= '1';  -- Reveal the mine
-                else
-                    -- Safe tile - reveal it
-                    reveal_map(cur_i) <= '1';  -- This will show either a number or empty space
+                elsif ms_init = DONE then  -- Only allow reveals after initialization is complete
+                    if mine_map(cur_i) = '1' then
+                        -- Hit a mine - game over
+                        win <= b"00";
+                        reveal_map(cur_i) <= '1';  -- Reveal the mine
+                    else
+                        -- Safe tile - reveal it
+                        reveal_map(cur_i) <= '1';  -- This will show either a number or empty space
+                    end if;
                 end if;
             end if;
-            
         end if;       
     end process;
     
@@ -309,7 +308,6 @@ begin
     reveal_map_o <= reveal_map;
     flag_map_o <= flag_map;
     number_map_o <= number_map;
-    
     
     
     -- IF TOO MUCH DATA, SWITCH FLAG_MAP SO THAT IT UPDATES TO THE SIZE OF NUMBER OF MINES.

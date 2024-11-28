@@ -12,6 +12,10 @@ set_property -dict { PACKAGE_PIN J19   IOSTANDARD LVCMOS33 } [get_ports { blue[1
 set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { hsync }]; #IO_L8N_T1_D12_14 Sch=ja[10]
 set_property -dict { PACKAGE_PIN L18   IOSTANDARD LVCMOS33 } [get_ports { vsync }]; #IO_L8P_T1_D11_14 Sch=ja[4]
 
+## LED Pins
+set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { win[0] }];
+set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { win[1] }];
+
 ## Keypad Pins
 set_property -dict { PACKAGE_PIN M3    IOSTANDARD LVCMOS33 } [get_ports { key[1] }]; #IO_L8N_T1_AD14N_35 Sch=pio[01]
 set_property -dict { PACKAGE_PIN L3    IOSTANDARD LVCMOS33 } [get_ports { key[2] }]; #IO_L8P_T1_AD14P_35 Sch=pio[02]

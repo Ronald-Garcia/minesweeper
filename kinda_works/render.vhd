@@ -117,7 +117,7 @@ architecture behavioral of render is
         );
     end component;
 
-    -- Add components for revealed number tiles
+        -- Base ROM components for numbers 0-8
     component num_0
         port (
             a   : in  std_logic_vector(11 downto 0);
@@ -125,7 +125,7 @@ architecture behavioral of render is
         );
     end component;
     
-    component num_0_rcm
+    component num_0_bcm
         port (
             a   : in  std_logic_vector(7 downto 0);
             spo : out std_logic_vector(7 downto 0)
@@ -139,12 +139,45 @@ architecture behavioral of render is
         );
     end component;
     
-    component num_0_bcm
+    component num_0_rcm
         port (
             a   : in  std_logic_vector(7 downto 0);
             spo : out std_logic_vector(7 downto 0)
         );
     end component;
+
+    component num_1 port (a: in std_logic_vector(11 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_1_bcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_1_gcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_1_rcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_2 port (a: in std_logic_vector(11 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_2_bcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_2_gcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_2_rcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_3 port (a: in std_logic_vector(11 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_3_bcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_3_gcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_3_rcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_4 port (a: in std_logic_vector(11 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_4_bcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_4_gcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_4_rcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_5 port (a: in std_logic_vector(11 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_5_bcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_5_gcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_5_rcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_6 port (a: in std_logic_vector(11 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_6_bcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_6_gcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_6_rcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_7 port (a: in std_logic_vector(11 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_7_bcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_7_gcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_7_rcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_8 port (a: in std_logic_vector(11 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_8_bcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_8_gcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
+    component num_8_rcm port (a: in std_logic_vector(7 downto 0); spo: out std_logic_vector(7 downto 0)); end component;
 
     -- Board constants
     constant BOARD_SIZE : integer := 8;
@@ -160,8 +193,12 @@ architecture behavioral of render is
     signal flag_pixel : std_logic_vector(7 downto 0);
     signal flag_red, flag_green, flag_blue : std_logic_vector(7 downto 0);
 
-    signal num_pixel : std_logic_vector(7 downto 0);
-    signal num_red, num_green, num_blue : std_logic_vector(7 downto 0);
+-- Add to your signals section
+type pixel_array is array (0 to 8) of std_logic_vector(7 downto 0);
+signal num_pixels : pixel_array;
+signal num_reds   : pixel_array;
+signal num_greens : pixel_array;
+signal num_blues  : pixel_array;
 
     -- Display signals
     signal hcount : natural := 0;
@@ -257,30 +294,16 @@ begin
         );
 
     -- Number ROM instantiations
-    num_rom: num_0
-        port map (
-            a   => pixel_addr,
-            spo => num_pixel
-        );
+    num_0_rom: num_0 port map(a => pixel_addr, spo => num_pixels(0)); num_0_r: num_0_rcm port map(a => num_pixels(0), spo => num_reds(0)); num_0_g: num_0_gcm port map(a => num_pixels(0), spo => num_greens(0)); num_0_b: num_0_bcm port map(a => num_pixels(0), spo => num_blues(0));
+    num_1_rom: num_1 port map(a => pixel_addr, spo => num_pixels(1)); num_1_r: num_1_rcm port map(a => num_pixels(1), spo => num_reds(1)); num_1_g: num_1_gcm port map(a => num_pixels(1), spo => num_greens(1)); num_1_b: num_1_bcm port map(a => num_pixels(1), spo => num_blues(1));
+    num_2_rom: num_2 port map(a => pixel_addr, spo => num_pixels(2)); num_2_r: num_2_rcm port map(a => num_pixels(2), spo => num_reds(2)); num_2_g: num_2_gcm port map(a => num_pixels(2), spo => num_greens(2)); num_2_b: num_2_bcm port map(a => num_pixels(2), spo => num_blues(2));
+    num_3_rom: num_3 port map(a => pixel_addr, spo => num_pixels(3)); num_3_r: num_3_rcm port map(a => num_pixels(3), spo => num_reds(3)); num_3_g: num_3_gcm port map(a => num_pixels(3), spo => num_greens(3)); num_3_b: num_3_bcm port map(a => num_pixels(3), spo => num_blues(3));
+    num_4_rom: num_4 port map(a => pixel_addr, spo => num_pixels(4)); num_4_r: num_4_rcm port map(a => num_pixels(4), spo => num_reds(4)); num_4_g: num_4_gcm port map(a => num_pixels(4), spo => num_greens(4)); num_4_b: num_4_bcm port map(a => num_pixels(4), spo => num_blues(4));
+    num_5_rom: num_5 port map(a => pixel_addr, spo => num_pixels(5)); num_5_r: num_5_rcm port map(a => num_pixels(5), spo => num_reds(5)); num_5_g: num_5_gcm port map(a => num_pixels(5), spo => num_greens(5)); num_5_b: num_5_bcm port map(a => num_pixels(5), spo => num_blues(5));
+    num_6_rom: num_6 port map(a => pixel_addr, spo => num_pixels(6)); num_6_r: num_6_rcm port map(a => num_pixels(6), spo => num_reds(6)); num_6_g: num_6_gcm port map(a => num_pixels(6), spo => num_greens(6)); num_6_b: num_6_bcm port map(a => num_pixels(6), spo => num_blues(6));
+    num_7_rom: num_7 port map(a => pixel_addr, spo => num_pixels(7)); num_7_r: num_7_rcm port map(a => num_pixels(7), spo => num_reds(7)); num_7_g: num_7_gcm port map(a => num_pixels(7), spo => num_greens(7)); num_7_b: num_7_bcm port map(a => num_pixels(7), spo => num_blues(7));
+    num_8_rom: num_8 port map(a => pixel_addr, spo => num_pixels(8)); num_8_r: num_8_rcm port map(a => num_pixels(8), spo => num_reds(8)); num_8_g: num_8_gcm port map(a => num_pixels(8), spo => num_greens(8)); num_8_b: num_8_bcm port map(a => num_pixels(8), spo => num_blues(8));
     
-    num_r: num_0_rcm
-        port map (
-            a   => num_pixel,
-            spo => num_red
-        );
-    
-    num_g: num_0_gcm
-        port map (
-            a   => num_pixel,
-            spo => num_green
-        );
-    
-    num_b: num_0_bcm
-        port map (
-            a   => num_pixel,
-            spo => num_blue
-        );
-
     -- Clock management tile
     cmt: MMCME2_BASE generic map (
         BANDWIDTH => "OPTIMIZED",
@@ -418,9 +441,9 @@ begin
                                 blue  <= bomb_blue(7 downto 6);
                             else
                                 -- Show revealed tile using number ROM and color maps
-                                red   <= num_red(7 downto 6);
-                                green <= num_green(7 downto 6);
-                                blue  <= num_blue(7 downto 6);
+                                red   <= num_reds(number_map_in(cell_index))(7 downto 6);
+                                green <= num_greens(number_map_in(cell_index))(7 downto 6);
+                                blue  <= num_blues(number_map_in(cell_index))(7 downto 6);
                             end if;
                         else
                             -- Show face-down tile using face-down ROM and color maps
