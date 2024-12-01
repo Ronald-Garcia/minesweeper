@@ -1,0 +1,2 @@
+num_1_bcm.v,verilog,xil_defaultlib,../../../../minsweeper_vga_testing.gen/sources_1/ip/num_1_bcm/sim/num_1_bcm.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

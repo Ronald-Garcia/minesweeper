@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.1 (64-bit)
+# SW Build 5094488 on Fri Jun 14 08:59:21 MDT 2024
+# IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
+# SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
+# Start of session at: Sun Dec  1 13:10:04 2024
+# Process ID: 16988
+# Current directory: C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_2_gcm_synth_1
+# Command line: vivado.exe -log num_2_gcm.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source num_2_gcm.tcl
+# Log file: C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_2_gcm_synth_1/num_2_gcm.vds
+# Journal file: C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_2_gcm_synth_1\vivado.jou
+# Running On        :babushkacoloD
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-11390H @ 3.40GHz
+# CPU Frequency     :3418 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16913 MB
+# Swap memory       :9317 MB
+# Total Virtual     :26231 MB
+# Available Virtual :4973 MB
+#-----------------------------------------------------------
+source num_2_gcm.tcl -notrace

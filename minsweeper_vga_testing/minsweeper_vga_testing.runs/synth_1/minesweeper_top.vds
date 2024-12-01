@@ -1,0 +1,790 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.1 (64-bit)
+# SW Build 5094488 on Fri Jun 14 08:59:21 MDT 2024
+# IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
+# SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
+# Start of session at: Sun Dec  1 13:21:12 2024
+# Process ID: 24676
+# Current directory: C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1
+# Command line: vivado.exe -log minesweeper_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source minesweeper_top.tcl
+# Log file: C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/minesweeper_top.vds
+# Journal file: C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1\vivado.jou
+# Running On        :babushkacoloD
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-11390H @ 3.40GHz
+# CPU Frequency     :3418 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16913 MB
+# Swap memory       :9126 MB
+# Total Virtual     :26040 MB
+# Available Virtual :6999 MB
+#-----------------------------------------------------------
+source minesweeper_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 523.875 ; gain = 236.734
+Command: read_checkpoint -auto_incremental -incremental C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/utils_1/imports/synth_1/render.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/utils_1/imports/synth_1/render.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top minesweeper_top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+WARNING: [Vivado_Tcl 4-1809] The reference checkpoint is from an old version of Vivado; A full resynthesis flow will be run
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20920
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1395.961 ; gain = 450.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'minesweeper_top' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_top.vhd:25]
+INFO: [Synth 8-3491] module 'ms_keypad' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_keypad.vhd:5' bound to instance 'keypad' of component 'ms_keypad' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_top.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'ms_keypad' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_keypad.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'ms_keypad' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_keypad.vhd:15]
+INFO: [Synth 8-3491] module 'ms_game' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_game.vhd:9' bound to instance 'game' of component 'ms_game' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_top.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'ms_game' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_game.vhd:26]
+INFO: [Synth 8-3491] module 'rng' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/rng.vhd:5' bound to instance 'ms_rng' of component 'rng' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_game.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'rng' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/rng.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'rng' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/rng.vhd:14]
+INFO: [Synth 8-3491] module 'synch' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_synchronizer.vhd:4' bound to instance 'ms_synch' of component 'synch' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_game.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'synch' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_synchronizer.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'synch' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_synchronizer.vhd:13]
+WARNING: [Synth 8-614] signal 'ms_init' is read in the process but is not in the sensitivity list [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_game.vhd:211]
+WARNING: [Synth 8-614] signal 'number_map' is read in the process but is not in the sensitivity list [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_game.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'ms_game' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_game.vhd:26]
+INFO: [Synth 8-3491] module 'render' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:9' bound to instance 'renderer' of component 'render' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_top.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'render' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:31]
+INFO: [Synth 8-3491] module 'facing_down_image_rom' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/facing_down_image_rom_stub.vhdl:6' bound to instance 'fd_rom' of component 'facing_down_image_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'facing_down_image_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/facing_down_image_rom_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'facing_down_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/facing_down_rcm_stub.vhdl:6' bound to instance 'fd_rcm' of component 'facing_down_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'facing_down_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/facing_down_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'facing_down_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/facing_down_gcm_stub.vhdl:6' bound to instance 'fd_gcm' of component 'facing_down_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'facing_down_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/facing_down_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'facing_down_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/facing_down_bcm_stub.vhdl:6' bound to instance 'fd_bcm' of component 'facing_down_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'facing_down_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/facing_down_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'bomb' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/bomb_stub.vhdl:6' bound to instance 'bomb_rom' of component 'bomb' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'bomb' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/bomb_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'bomb_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/bomb_rcm_stub.vhdl:6' bound to instance 'bomb_r' of component 'bomb_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'bomb_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/bomb_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'bomb_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/bomb_gcm_stub.vhdl:6' bound to instance 'bomb_g' of component 'bomb_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:267]
+INFO: [Synth 8-638] synthesizing module 'bomb_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/bomb_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'bomb_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/bomb_bcm_stub.vhdl:6' bound to instance 'bomb_b' of component 'bomb_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:273]
+INFO: [Synth 8-638] synthesizing module 'bomb_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/bomb_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'flag' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/flag_stub.vhdl:6' bound to instance 'flag_rom' of component 'flag' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:280]
+INFO: [Synth 8-638] synthesizing module 'flag' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/flag_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'flag_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/flag_rcm_stub.vhdl:6' bound to instance 'flag_r' of component 'flag_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'flag_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/flag_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'flag_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/flag_gcm_stub.vhdl:6' bound to instance 'flag_g' of component 'flag_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:292]
+INFO: [Synth 8-638] synthesizing module 'flag_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/flag_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'flag_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/flag_bcm_stub.vhdl:6' bound to instance 'flag_b' of component 'flag_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:298]
+INFO: [Synth 8-638] synthesizing module 'flag_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/flag_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_0' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_0_stub.vhdl:6' bound to instance 'num_0_rom' of component 'num_0' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'num_0' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_0_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_0_rcm_stub.vhdl:6' bound to instance 'num_0_r' of component 'num_0_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'num_0_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_0_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_0_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_0_gcm_stub.vhdl:6' bound to instance 'num_0_g' of component 'num_0_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'num_0_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_0_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_0_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_0_bcm_stub.vhdl:6' bound to instance 'num_0_b' of component 'num_0_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'num_0_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_0_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_1' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_1_stub.vhdl:6' bound to instance 'num_1_rom' of component 'num_1' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:306]
+INFO: [Synth 8-638] synthesizing module 'num_1' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_1_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_1_rcm_stub.vhdl:6' bound to instance 'num_1_r' of component 'num_1_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:306]
+INFO: [Synth 8-638] synthesizing module 'num_1_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_1_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_1_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_1_gcm_stub.vhdl:6' bound to instance 'num_1_g' of component 'num_1_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:306]
+INFO: [Synth 8-638] synthesizing module 'num_1_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_1_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_1_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_1_bcm_stub.vhdl:6' bound to instance 'num_1_b' of component 'num_1_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:306]
+INFO: [Synth 8-638] synthesizing module 'num_1_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_1_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_2' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_2_stub.vhdl:6' bound to instance 'num_2_rom' of component 'num_2' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'num_2' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_2_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_2_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_2_rcm_stub.vhdl:6' bound to instance 'num_2_r' of component 'num_2_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'num_2_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_2_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_2_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_2_gcm_stub.vhdl:6' bound to instance 'num_2_g' of component 'num_2_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'num_2_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_2_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_2_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_2_bcm_stub.vhdl:6' bound to instance 'num_2_b' of component 'num_2_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'num_2_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_2_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_3' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_3_stub.vhdl:6' bound to instance 'num_3_rom' of component 'num_3' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:308]
+INFO: [Synth 8-638] synthesizing module 'num_3' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_3_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_3_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_3_rcm_stub.vhdl:6' bound to instance 'num_3_r' of component 'num_3_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:308]
+INFO: [Synth 8-638] synthesizing module 'num_3_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_3_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_3_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_3_gcm_stub.vhdl:6' bound to instance 'num_3_g' of component 'num_3_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:308]
+INFO: [Synth 8-638] synthesizing module 'num_3_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_3_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_3_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_3_bcm_stub.vhdl:6' bound to instance 'num_3_b' of component 'num_3_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:308]
+INFO: [Synth 8-638] synthesizing module 'num_3_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_3_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_4' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_4_stub.vhdl:6' bound to instance 'num_4_rom' of component 'num_4' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'num_4' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_4_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_4_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_4_rcm_stub.vhdl:6' bound to instance 'num_4_r' of component 'num_4_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'num_4_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_4_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_4_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_4_gcm_stub.vhdl:6' bound to instance 'num_4_g' of component 'num_4_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'num_4_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_4_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_4_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_4_bcm_stub.vhdl:6' bound to instance 'num_4_b' of component 'num_4_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'num_4_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_4_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_5' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_5_stub.vhdl:6' bound to instance 'num_5_rom' of component 'num_5' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:310]
+INFO: [Synth 8-638] synthesizing module 'num_5' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_5_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_5_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_5_rcm_stub.vhdl:6' bound to instance 'num_5_r' of component 'num_5_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:310]
+INFO: [Synth 8-638] synthesizing module 'num_5_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_5_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_5_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_5_gcm_stub.vhdl:6' bound to instance 'num_5_g' of component 'num_5_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:310]
+INFO: [Synth 8-638] synthesizing module 'num_5_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_5_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_5_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_5_bcm_stub.vhdl:6' bound to instance 'num_5_b' of component 'num_5_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:310]
+INFO: [Synth 8-638] synthesizing module 'num_5_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_5_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_6' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_6_stub.vhdl:6' bound to instance 'num_6_rom' of component 'num_6' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:311]
+INFO: [Synth 8-638] synthesizing module 'num_6' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_6_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_6_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_6_rcm_stub.vhdl:6' bound to instance 'num_6_r' of component 'num_6_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:311]
+INFO: [Synth 8-638] synthesizing module 'num_6_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_6_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_6_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_6_gcm_stub.vhdl:6' bound to instance 'num_6_g' of component 'num_6_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:311]
+INFO: [Synth 8-638] synthesizing module 'num_6_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_6_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_6_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_6_bcm_stub.vhdl:6' bound to instance 'num_6_b' of component 'num_6_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:311]
+INFO: [Synth 8-638] synthesizing module 'num_6_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_6_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_7' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_7_stub.vhdl:6' bound to instance 'num_7_rom' of component 'num_7' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:312]
+INFO: [Synth 8-638] synthesizing module 'num_7' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_7_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_7_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_7_rcm_stub.vhdl:6' bound to instance 'num_7_r' of component 'num_7_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:312]
+INFO: [Synth 8-638] synthesizing module 'num_7_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_7_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_7_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_7_gcm_stub.vhdl:6' bound to instance 'num_7_g' of component 'num_7_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:312]
+INFO: [Synth 8-638] synthesizing module 'num_7_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_7_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_7_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_7_bcm_stub.vhdl:6' bound to instance 'num_7_b' of component 'num_7_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:312]
+INFO: [Synth 8-638] synthesizing module 'num_7_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_7_bcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_8' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_8_stub.vhdl:6' bound to instance 'num_8_rom' of component 'num_8' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:313]
+INFO: [Synth 8-638] synthesizing module 'num_8' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_8_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_8_rcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_8_rcm_stub.vhdl:6' bound to instance 'num_8_r' of component 'num_8_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:313]
+INFO: [Synth 8-638] synthesizing module 'num_8_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_8_rcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_8_gcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_8_gcm_stub.vhdl:6' bound to instance 'num_8_g' of component 'num_8_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:313]
+INFO: [Synth 8-638] synthesizing module 'num_8_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_8_gcm_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'num_8_bcm' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_8_bcm_stub.vhdl:6' bound to instance 'num_8_b' of component 'num_8_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:313]
+INFO: [Synth 8-638] synthesizing module 'num_8_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/.Xil/Vivado-24676-babushkacoloD/realtime/num_8_bcm_stub.vhdl:14]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 50.875000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 83.333000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 24.250000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: double 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'cmt' to cell 'MMCME2_BASE' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:316]
+INFO: [Synth 8-256] done synthesizing module 'render' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'minesweeper_top' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_top.vhd:25]
+WARNING: [Synth 8-3848] Net tx in module/entity ms_keypad does not have driver. [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_keypad.vhd:9]
+WARNING: [Synth 8-6014] Unused sequential element blank_reg was removed.  [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:407]
+WARNING: [Synth 8-6014] Unused sequential element frame_reg was removed.  [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:489]
+WARNING: [Synth 8-3936] Found unconnected internal register 'cursor_x_infx_reg' and it is trimmed from '4' to '3' bits. [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'cursor_y_infx_reg' and it is trimmed from '4' to '3' bits. [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/render.vhd:227]
+WARNING: [Synth 8-7129] Port key[7] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[6] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[5] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[4] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[2] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[1] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cursor_x_in[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cursor_y_in[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module ms_game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx in module ms_keypad is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx in module ms_keypad is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1529.914 ; gain = 584.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1529.914 ; gain = 584.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1529.914 ; gain = 584.434
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1529.914 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/facing_down_image_rom/facing_down_image_rom/facing_down_image_rom_in_context.xdc] for cell 'renderer/fd_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/facing_down_image_rom/facing_down_image_rom/facing_down_image_rom_in_context.xdc] for cell 'renderer/fd_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/facing_down_gcm/facing_down_gcm/facing_down_gcm_in_context.xdc] for cell 'renderer/fd_gcm'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/facing_down_gcm/facing_down_gcm/facing_down_gcm_in_context.xdc] for cell 'renderer/fd_gcm'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/facing_down_rcm/facing_down_rcm/facing_down_rcm_in_context.xdc] for cell 'renderer/fd_rcm'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/facing_down_rcm/facing_down_rcm/facing_down_rcm_in_context.xdc] for cell 'renderer/fd_rcm'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/facing_down_bcm_1/facing_down_bcm/facing_down_bcm_in_context.xdc] for cell 'renderer/fd_bcm'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/facing_down_bcm_1/facing_down_bcm/facing_down_bcm_in_context.xdc] for cell 'renderer/fd_bcm'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_6/num_6/num_6_in_context.xdc] for cell 'renderer/num_6_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_6/num_6/num_6_in_context.xdc] for cell 'renderer/num_6_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/flag/flag/flag_in_context.xdc] for cell 'renderer/flag_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/flag/flag/flag_in_context.xdc] for cell 'renderer/flag_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_1/num_1/num_1_in_context.xdc] for cell 'renderer/num_1_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_1/num_1/num_1_in_context.xdc] for cell 'renderer/num_1_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_0/num_0/num_0_in_context.xdc] for cell 'renderer/num_0_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_0/num_0/num_0_in_context.xdc] for cell 'renderer/num_0_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_5/num_5/num_5_in_context.xdc] for cell 'renderer/num_5_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_5/num_5/num_5_in_context.xdc] for cell 'renderer/num_5_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_7/num_7/num_7_in_context.xdc] for cell 'renderer/num_7_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_7/num_7/num_7_in_context.xdc] for cell 'renderer/num_7_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_4/num_4/num_4_in_context.xdc] for cell 'renderer/num_4_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_4/num_4/num_4_in_context.xdc] for cell 'renderer/num_4_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/bomb/bomb/bomb_in_context.xdc] for cell 'renderer/bomb_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/bomb/bomb/bomb_in_context.xdc] for cell 'renderer/bomb_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_8/num_8/num_8_in_context.xdc] for cell 'renderer/num_8_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_8/num_8/num_8_in_context.xdc] for cell 'renderer/num_8_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_3/num_3/num_3_in_context.xdc] for cell 'renderer/num_3_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_3/num_3/num_3_in_context.xdc] for cell 'renderer/num_3_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_2/num_2/num_2_in_context.xdc] for cell 'renderer/num_2_rom'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_2/num_2/num_2_in_context.xdc] for cell 'renderer/num_2_rom'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/bomb_rcm/bomb_rcm/bomb_rcm_in_context.xdc] for cell 'renderer/bomb_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/bomb_rcm/bomb_rcm/bomb_rcm_in_context.xdc] for cell 'renderer/bomb_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/flag_bcm/flag_bcm/flag_bcm_in_context.xdc] for cell 'renderer/flag_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/flag_bcm/flag_bcm/flag_bcm_in_context.xdc] for cell 'renderer/flag_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/bomb_bcm/bomb_bcm/bomb_bcm_in_context.xdc] for cell 'renderer/bomb_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/bomb_bcm/bomb_bcm/bomb_bcm_in_context.xdc] for cell 'renderer/bomb_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/flag_rcm/flag_rcm/flag_rcm_in_context.xdc] for cell 'renderer/flag_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/flag_rcm/flag_rcm/flag_rcm_in_context.xdc] for cell 'renderer/flag_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/bomb_gcm/bomb_gcm/bomb_gcm_in_context.xdc] for cell 'renderer/bomb_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/bomb_gcm/bomb_gcm/bomb_gcm_in_context.xdc] for cell 'renderer/bomb_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_0_rcm/num_0_rcm/num_0_rcm_in_context.xdc] for cell 'renderer/num_0_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_0_rcm/num_0_rcm/num_0_rcm_in_context.xdc] for cell 'renderer/num_0_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_0_gcm/num_0_gcm/num_0_gcm_in_context.xdc] for cell 'renderer/num_0_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_0_gcm/num_0_gcm/num_0_gcm_in_context.xdc] for cell 'renderer/num_0_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_0_bcm/num_0_bcm/num_0_bcm_in_context.xdc] for cell 'renderer/num_0_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_0_bcm/num_0_bcm/num_0_bcm_in_context.xdc] for cell 'renderer/num_0_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_1_rcm/num_1_rcm/num_1_rcm_in_context.xdc] for cell 'renderer/num_1_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_1_rcm/num_1_rcm/num_1_rcm_in_context.xdc] for cell 'renderer/num_1_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_1_gcm/num_1_gcm/num_1_gcm_in_context.xdc] for cell 'renderer/num_1_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_1_gcm/num_1_gcm/num_1_gcm_in_context.xdc] for cell 'renderer/num_1_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_1_bcm/num_1_bcm/num_1_bcm_in_context.xdc] for cell 'renderer/num_1_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_1_bcm/num_1_bcm/num_1_bcm_in_context.xdc] for cell 'renderer/num_1_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_2_bcm/num_2_bcm/num_2_bcm_in_context.xdc] for cell 'renderer/num_2_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_2_bcm/num_2_bcm/num_2_bcm_in_context.xdc] for cell 'renderer/num_2_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_2_gcm/num_2_gcm/num_2_gcm_in_context.xdc] for cell 'renderer/num_2_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_2_gcm/num_2_gcm/num_2_gcm_in_context.xdc] for cell 'renderer/num_2_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_2_rcm/num_2_rcm/num_2_rcm_in_context.xdc] for cell 'renderer/num_2_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_2_rcm/num_2_rcm/num_2_rcm_in_context.xdc] for cell 'renderer/num_2_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_3_bcm/num_3_bcm/num_3_bcm_in_context.xdc] for cell 'renderer/num_3_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_3_bcm/num_3_bcm/num_3_bcm_in_context.xdc] for cell 'renderer/num_3_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_3_gcm/num_3_gcm/num_3_gcm_in_context.xdc] for cell 'renderer/num_3_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_3_gcm/num_3_gcm/num_3_gcm_in_context.xdc] for cell 'renderer/num_3_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_3_rcm/num_3_rcm/num_3_rcm_in_context.xdc] for cell 'renderer/num_3_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_3_rcm/num_3_rcm/num_3_rcm_in_context.xdc] for cell 'renderer/num_3_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_4_bcm/num_4_bcm/num_4_bcm_in_context.xdc] for cell 'renderer/num_4_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_4_bcm/num_4_bcm/num_4_bcm_in_context.xdc] for cell 'renderer/num_4_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_4_gcm/num_4_gcm/num_4_gcm_in_context.xdc] for cell 'renderer/num_4_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_4_gcm/num_4_gcm/num_4_gcm_in_context.xdc] for cell 'renderer/num_4_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_4_rcm/num_4_rcm/num_4_rcm_in_context.xdc] for cell 'renderer/num_4_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_4_rcm/num_4_rcm/num_4_rcm_in_context.xdc] for cell 'renderer/num_4_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_5_bcm/num_5_bcm/num_5_bcm_in_context.xdc] for cell 'renderer/num_5_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_5_bcm/num_5_bcm/num_5_bcm_in_context.xdc] for cell 'renderer/num_5_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_5_gcm/num_5_gcm/num_5_gcm_in_context.xdc] for cell 'renderer/num_5_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_5_gcm/num_5_gcm/num_5_gcm_in_context.xdc] for cell 'renderer/num_5_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_5_rcm/num_5_rcm/num_5_rcm_in_context.xdc] for cell 'renderer/num_5_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_5_rcm/num_5_rcm/num_5_rcm_in_context.xdc] for cell 'renderer/num_5_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_6_bcm/num_6_bcm/num_6_bcm_in_context.xdc] for cell 'renderer/num_6_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_6_bcm/num_6_bcm/num_6_bcm_in_context.xdc] for cell 'renderer/num_6_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_6_gcm/num_6_gcm/num_6_gcm_in_context.xdc] for cell 'renderer/num_6_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_6_gcm/num_6_gcm/num_6_gcm_in_context.xdc] for cell 'renderer/num_6_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_6_rcm/num_6_rcm/num_6_rcm_in_context.xdc] for cell 'renderer/num_6_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_6_rcm/num_6_rcm/num_6_rcm_in_context.xdc] for cell 'renderer/num_6_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_7_bcm/num_7_bcm/num_7_bcm_in_context.xdc] for cell 'renderer/num_7_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_7_bcm/num_7_bcm/num_7_bcm_in_context.xdc] for cell 'renderer/num_7_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_7_gcm/num_7_gcm/num_7_gcm_in_context.xdc] for cell 'renderer/num_7_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_7_gcm/num_7_gcm/num_7_gcm_in_context.xdc] for cell 'renderer/num_7_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_7_rcm/num_7_rcm/num_7_rcm_in_context.xdc] for cell 'renderer/num_7_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_7_rcm/num_7_rcm/num_7_rcm_in_context.xdc] for cell 'renderer/num_7_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_8_bcm/num_8_bcm/num_8_bcm_in_context.xdc] for cell 'renderer/num_8_b'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_8_bcm/num_8_bcm/num_8_bcm_in_context.xdc] for cell 'renderer/num_8_b'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_8_gcm/num_8_gcm/num_8_gcm_in_context.xdc] for cell 'renderer/num_8_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_8_gcm/num_8_gcm/num_8_gcm_in_context.xdc] for cell 'renderer/num_8_g'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_8_rcm/num_8_rcm/num_8_rcm_in_context.xdc] for cell 'renderer/num_8_r'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/num_8_rcm/num_8_rcm/num_8_rcm_in_context.xdc] for cell 'renderer/num_8_r'
+Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/flag_gcm/flag_gcm/flag_gcm_in_context.xdc] for cell 'renderer/flag_g'
+Finished Parsing XDC File [c:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.gen/sources_1/ip/flag_gcm/flag_gcm/flag_gcm_in_context.xdc] for cell 'renderer/flag_g'
+Parsing XDC File [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/lab_f_a7.xdc]
+Finished Parsing XDC File [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/lab_f_a7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/lab_f_a7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/minesweeper_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/minesweeper_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1628.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1628.719 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/fd_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/fd_gcm. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/fd_rcm. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/fd_bcm. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_6_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/flag_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_1_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_0_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_5_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_7_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_4_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/bomb_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_8_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_3_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_2_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/bomb_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/flag_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/bomb_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/flag_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/bomb_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_0_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_0_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_0_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_1_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_1_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_1_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_2_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_2_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_2_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_3_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_3_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_3_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_4_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_4_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_4_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_5_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_5_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_5_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_6_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_6_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_6_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_7_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_7_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_7_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_8_b. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_8_g. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/num_8_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for renderer/flag_g. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'scan_state_reg' in module 'ms_keypad'
+INFO: [Synth 8-802] inferred FSM for state register 'ms_init_reg' in module 'ms_game'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                     000000000001 |                             0000
+                 iSTATE4 |                     000000000010 |                             0001
+                 iSTATE1 |                     000000000100 |                             0010
+                  iSTATE |                     000000001000 |                             0011
+                 iSTATE0 |                     000000010000 |                             0100
+                iSTATE10 |                     000000100000 |                             0101
+                 iSTATE9 |                     000001000000 |                             0110
+                 iSTATE7 |                     000010000000 |                             0111
+                 iSTATE8 |                     000100000000 |                             1000
+                 iSTATE6 |                     001000000000 |                             1001
+                 iSTATE3 |                     010000000000 |                             1010
+                 iSTATE2 |                     100000000000 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'scan_state_reg' using encoding 'one-hot' in module 'ms_keypad'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                   mines |                              001 |                              001
+                 numbers |                              010 |                              010
+                    done |                              011 |                              011
+               won_state |                              100 |                              101
+              lost_state |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ms_init_reg' using encoding 'sequential' in module 'ms_game'
+WARNING: [Synth 8-327] inferring latch for variable 'reset_reg' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_top.vhd:116]
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_reg' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/ms_top.vhd:159]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 16    
+	   2 Input   31 Bit       Adders := 7     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 7     
+	               32 Bit    Registers := 2     
+	               31 Bit    Registers := 2     
+	               12 Bit    Registers := 6     
+	               10 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 128   
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 12    
+	   3 Input   64 Bit        Muxes := 4     
+	   6 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 3     
+	   6 Input   32 Bit        Muxes := 2     
+	   2 Input   31 Bit        Muxes := 4     
+	  12 Input   12 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	  12 Input    7 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 13    
+	  12 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 4     
+	   6 Input    1 Bit        Muxes := 67    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port key[7] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[6] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[5] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[4] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[2] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[1] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cursor_x_in[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cursor_y_in[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module ms_game is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (reset_reg) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[30]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[29]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[28]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[27]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[26]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[25]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[24]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[23]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[22]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[21]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[20]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[19]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[18]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[17]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[16]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[15]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[14]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[13]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[12]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[11]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[10]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[9]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[8]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[7]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[6]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[5]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[4]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[3]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[2]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[1]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[0]) is unused and will be removed from module minesweeper_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:52 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:53 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|minesweeper_top | game/ms_synch/d_tmp_reg[2][10] | 3      | 6     | NO           | NO                 | YES               | 6      | 0       | 
+|minesweeper_top | game/ms_rng/cur_seed_reg[55]   | 7      | 5     | YES          | NO                 | YES               | 5      | 0       | 
+|minesweeper_top | game/ms_rng/cur_seed_reg[45]   | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|minesweeper_top | game/ms_rng/cur_seed_reg[39]   | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++----------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------+----------+
+|      |BlackBox name         |Instances |
++------+----------------------+----------+
+|1     |facing_down_image_rom |         1|
+|2     |facing_down_rcm       |         1|
+|3     |facing_down_gcm       |         1|
+|4     |facing_down_bcm       |         1|
+|5     |bomb                  |         1|
+|6     |bomb_rcm              |         1|
+|7     |bomb_gcm              |         1|
+|8     |bomb_bcm              |         1|
+|9     |flag                  |         1|
+|10    |flag_rcm              |         1|
+|11    |flag_gcm              |         1|
+|12    |flag_bcm              |         1|
+|13    |num_0                 |         1|
+|14    |num_0_rcm             |         1|
+|15    |num_0_gcm             |         1|
+|16    |num_0_bcm             |         1|
+|17    |num_1                 |         1|
+|18    |num_1_rcm             |         1|
+|19    |num_1_gcm             |         1|
+|20    |num_1_bcm             |         1|
+|21    |num_2                 |         1|
+|22    |num_2_rcm             |         1|
+|23    |num_2_gcm             |         1|
+|24    |num_2_bcm             |         1|
+|25    |num_3                 |         1|
+|26    |num_3_rcm             |         1|
+|27    |num_3_gcm             |         1|
+|28    |num_3_bcm             |         1|
+|29    |num_4                 |         1|
+|30    |num_4_rcm             |         1|
+|31    |num_4_gcm             |         1|
+|32    |num_4_bcm             |         1|
+|33    |num_5                 |         1|
+|34    |num_5_rcm             |         1|
+|35    |num_5_gcm             |         1|
+|36    |num_5_bcm             |         1|
+|37    |num_6                 |         1|
+|38    |num_6_rcm             |         1|
+|39    |num_6_gcm             |         1|
+|40    |num_6_bcm             |         1|
+|41    |num_7                 |         1|
+|42    |num_7_rcm             |         1|
+|43    |num_7_gcm             |         1|
+|44    |num_7_bcm             |         1|
+|45    |num_8                 |         1|
+|46    |num_8_rcm             |         1|
+|47    |num_8_gcm             |         1|
+|48    |num_8_bcm             |         1|
++------+----------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |bomb_bbox                  |     1|
+|2     |bomb_bcm_bbox              |     1|
+|3     |bomb_gcm_bbox              |     1|
+|4     |bomb_rcm_bbox              |     1|
+|5     |facing_down_bcm_bbox       |     1|
+|6     |facing_down_gcm_bbox       |     1|
+|7     |facing_down_image_rom_bbox |     1|
+|8     |facing_down_rcm_bbox       |     1|
+|9     |flag_bbox                  |     1|
+|10    |flag_bcm_bbox              |     1|
+|11    |flag_gcm_bbox              |     1|
+|12    |flag_rcm_bbox              |     1|
+|13    |num_0_bbox                 |     1|
+|14    |num_0_bcm_bbox             |     1|
+|15    |num_0_gcm_bbox             |     1|
+|16    |num_0_rcm_bbox             |     1|
+|17    |num_1_bbox                 |     1|
+|18    |num_1_bcm_bbox             |     1|
+|19    |num_1_gcm_bbox             |     1|
+|20    |num_1_rcm_bbox             |     1|
+|21    |num_2_bbox                 |     1|
+|22    |num_2_bcm_bbox             |     1|
+|23    |num_2_gcm_bbox             |     1|
+|24    |num_2_rcm_bbox             |     1|
+|25    |num_3_bbox                 |     1|
+|26    |num_3_bcm_bbox             |     1|
+|27    |num_3_gcm_bbox             |     1|
+|28    |num_3_rcm_bbox             |     1|
+|29    |num_4_bbox                 |     1|
+|30    |num_4_bcm_bbox             |     1|
+|31    |num_4_gcm_bbox             |     1|
+|32    |num_4_rcm_bbox             |     1|
+|33    |num_5_bbox                 |     1|
+|34    |num_5_bcm_bbox             |     1|
+|35    |num_5_gcm_bbox             |     1|
+|36    |num_5_rcm_bbox             |     1|
+|37    |num_6_bbox                 |     1|
+|38    |num_6_bcm_bbox             |     1|
+|39    |num_6_gcm_bbox             |     1|
+|40    |num_6_rcm_bbox             |     1|
+|41    |num_7_bbox                 |     1|
+|42    |num_7_bcm_bbox             |     1|
+|43    |num_7_gcm_bbox             |     1|
+|44    |num_7_rcm_bbox             |     1|
+|45    |num_8_bbox                 |     1|
+|46    |num_8_bcm_bbox             |     1|
+|47    |num_8_gcm_bbox             |     1|
+|48    |num_8_rcm_bbox             |     1|
+|49    |BUFG                       |     2|
+|50    |CARRY4                     |   443|
+|51    |LUT1                       |   244|
+|52    |LUT2                       |   332|
+|53    |LUT3                       |   352|
+|54    |LUT4                       |   420|
+|55    |LUT5                       |   672|
+|56    |LUT6                       |   957|
+|57    |MMCME2_BASE                |     1|
+|58    |MUXF7                      |    68|
+|59    |MUXF8                      |    25|
+|60    |SRL16E                     |    13|
+|61    |FDCE                       |    24|
+|62    |FDPE                       |     8|
+|63    |FDRE                       |  1186|
+|64    |FDSE                       |     5|
+|65    |IBUF                       |     1|
+|66    |IOBUF                      |     3|
+|67    |OBUF                       |    11|
+|68    |OBUFT                      |     4|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1628.719 ; gain = 683.238
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 46 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:58 . Memory (MB): peak = 1628.719 ; gain = 584.434
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:01 . Memory (MB): peak = 1628.719 ; gain = 683.238
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1628.719 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 540 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1628.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: 2f431278
+INFO: [Common 17-83] Releasing license: Synthesis
+143 Infos, 67 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 1628.719 ; gain = 1084.367
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1628.719 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/minesweeper_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file minesweeper_top_utilization_synth.rpt -pb minesweeper_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  1 13:22:51 2024...

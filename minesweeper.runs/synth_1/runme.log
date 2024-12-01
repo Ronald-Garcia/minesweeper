@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log ms_game.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ms_game.tcl
+    with args -log minesweeper_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source minesweeper_top.tcl
 
 
 
@@ -8,196 +8,376 @@
   **** SW Build 5094488 on Fri Jun 14 08:59:21 MDT 2024
   **** IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
   **** SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
-  **** Start of session at: Sat Nov 23 16:37:51 2024
+  **** Start of session at: Sun Dec  1 12:10:25 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source ms_game.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 524.066 ; gain = 235.406
-Command: synth_design -top ms_game -part xc7a35tcpg236-1
+source minesweeper_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:33 . Memory (MB): peak = 523.785 ; gain = 237.738
+Command: read_checkpoint -auto_incremental -incremental C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minesweeper.srcs/utils_1/imports/synth_1/ms_game.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minesweeper.srcs/utils_1/imports/synth_1/ms_game.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top minesweeper_top -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16940
+INFO: [Synth 8-7075] Helper process launched with PID 38744
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 981.051 ; gain = 448.285
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1377.949 ; gain = 447.543
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ms_game' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:16]
-INFO: [Synth 8-3491] module 'rng' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/rng.vhd:5' bound to instance 'ms_rng' of component 'rng' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'minesweeper_top' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_top.vhd:25]
+INFO: [Synth 8-3491] module 'ms_keypad' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_keypad.vhd:5' bound to instance 'keypad' of component 'ms_keypad' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_top.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'ms_keypad' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_keypad.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'ms_keypad' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_keypad.vhd:15]
+INFO: [Synth 8-3491] module 'ms_game' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:9' bound to instance 'game' of component 'ms_game' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_top.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'ms_game' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:26]
+INFO: [Synth 8-3491] module 'rng' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/rng.vhd:5' bound to instance 'ms_rng' of component 'rng' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:63]
 INFO: [Synth 8-638] synthesizing module 'rng' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/rng.vhd:14]
-WARNING: [Synth 8-614] signal 'reset_i' is read in the process but is not in the sensitivity list [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/rng.vhd:17]
-WARNING: [Synth 8-614] signal 'seed_i' is read in the process but is not in the sensitivity list [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/rng.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'rng' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/rng.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'ms_game' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:16]
-WARNING: [Synth 8-6014] Unused sequential element mine_map_reg was removed.  [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:67]
-WARNING: [Synth 8-6014] Unused sequential element ms_init_reg was removed.  [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:61]
-WARNING: [Synth 8-6014] Unused sequential element number_map_reg was removed. 
-WARNING: [Synth 8-3848] Net win in module/entity ms_game does not have driver. [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:12]
-WARNING: [Synth 8-7129] Port win[1] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port win[0] in module ms_game is either unconnected or has no load
+INFO: [Synth 8-3491] module 'synch' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_synchronizer.vhd:4' bound to instance 'ms_synch' of component 'synch' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'synch' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_synchronizer.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'synch' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_synchronizer.vhd:13]
+WARNING: [Synth 8-614] signal 'ms_init' is read in the process but is not in the sensitivity list [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:211]
+WARNING: [Synth 8-614] signal 'number_map' is read in the process but is not in the sensitivity list [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'ms_game' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_game.vhd:26]
+INFO: [Synth 8-3491] module 'render' declared at 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:9' bound to instance 'renderer' of component 'render' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_top.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'render' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:31]
+INFO: [Synth 8-637] synthesizing blackbox instance 'fd_rom' of component 'facing_down_image_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:230]
+INFO: [Synth 8-637] synthesizing blackbox instance 'fd_rcm' of component 'facing_down_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:236]
+INFO: [Synth 8-637] synthesizing blackbox instance 'fd_gcm' of component 'facing_down_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:242]
+INFO: [Synth 8-637] synthesizing blackbox instance 'fd_bcm' of component 'facing_down_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:248]
+INFO: [Synth 8-637] synthesizing blackbox instance 'bomb_rom' of component 'bomb' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:255]
+INFO: [Synth 8-637] synthesizing blackbox instance 'bomb_r' of component 'bomb_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:261]
+INFO: [Synth 8-637] synthesizing blackbox instance 'bomb_g' of component 'bomb_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:267]
+INFO: [Synth 8-637] synthesizing blackbox instance 'bomb_b' of component 'bomb_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:273]
+INFO: [Synth 8-637] synthesizing blackbox instance 'flag_rom' of component 'flag' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:280]
+INFO: [Synth 8-637] synthesizing blackbox instance 'flag_r' of component 'flag_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:286]
+INFO: [Synth 8-637] synthesizing blackbox instance 'flag_g' of component 'flag_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:292]
+INFO: [Synth 8-637] synthesizing blackbox instance 'flag_b' of component 'flag_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:298]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_0_rom' of component 'num_0' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:305]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_0_r' of component 'num_0_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:305]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_0_g' of component 'num_0_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:305]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_0_b' of component 'num_0_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:305]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_1_rom' of component 'num_1' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:306]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_1_r' of component 'num_1_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:306]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_1_g' of component 'num_1_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:306]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_1_b' of component 'num_1_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:306]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_2_rom' of component 'num_2' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:307]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_2_r' of component 'num_2_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:307]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_2_g' of component 'num_2_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:307]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_2_b' of component 'num_2_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:307]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_3_rom' of component 'num_3' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:308]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_3_r' of component 'num_3_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:308]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_3_g' of component 'num_3_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:308]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_3_b' of component 'num_3_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:308]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_4_rom' of component 'num_4' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:309]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_4_r' of component 'num_4_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:309]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_4_g' of component 'num_4_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:309]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_4_b' of component 'num_4_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:309]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_5_rom' of component 'num_5' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:310]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_5_r' of component 'num_5_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:310]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_5_g' of component 'num_5_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:310]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_5_b' of component 'num_5_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:310]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_6_rom' of component 'num_6' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:311]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_6_r' of component 'num_6_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:311]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_6_g' of component 'num_6_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:311]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_6_b' of component 'num_6_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:311]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_7_rom' of component 'num_7' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:312]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_7_r' of component 'num_7_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:312]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_7_g' of component 'num_7_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:312]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_7_b' of component 'num_7_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:312]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_8_rom' of component 'num_8' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:313]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_8_r' of component 'num_8_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:313]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_8_g' of component 'num_8_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:313]
+INFO: [Synth 8-637] synthesizing blackbox instance 'num_8_b' of component 'num_8_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:313]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 50.875000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 83.333000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 24.250000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: double 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'cmt' to cell 'MMCME2_BASE' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:316]
+INFO: [Synth 8-256] done synthesizing module 'render' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'minesweeper_top' (0#1) [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_top.vhd:25]
+WARNING: [Synth 8-3848] Net tx in module/entity ms_keypad does not have driver. [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_keypad.vhd:9]
+WARNING: [Synth 8-6014] Unused sequential element blank_reg was removed.  [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:407]
+WARNING: [Synth 8-6014] Unused sequential element frame_reg was removed.  [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:489]
+WARNING: [Synth 8-3936] Found unconnected internal register 'cursor_x_infx_reg' and it is trimmed from '4' to '3' bits. [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'cursor_y_infx_reg' and it is trimmed from '4' to '3' bits. [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:227]
+WARNING: [Synth 8-7129] Port key[7] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[6] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[5] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[4] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[2] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[1] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cursor_x_in[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cursor_y_in[3] in module render is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reset in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[30] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[29] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[28] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[27] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[26] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[25] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[24] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[23] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[22] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[21] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[20] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[19] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[18] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[17] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[16] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[15] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[14] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[13] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[12] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[11] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[10] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[9] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[8] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[7] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[6] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[5] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[4] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[3] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[2] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[1] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[0] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[30] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[29] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[28] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[27] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[26] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[25] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[24] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[23] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[22] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[21] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[20] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[19] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[18] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[17] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[16] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[15] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[14] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[13] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[12] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[11] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[10] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[9] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[8] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[7] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[6] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[5] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[4] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[3] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[2] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[1] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_y[0] in module ms_game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx in module ms_keypad is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx in module ms_keypad is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1090.152 ; gain = 557.387
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 1510.887 ; gain = 580.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1090.152 ; gain = 557.387
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1510.887 ; gain = 580.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1510.887 ; gain = 580.480
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1510.887 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/lab_f_a7.xdc]
+Finished Parsing XDC File [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/lab_f_a7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/lab_f_a7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/minesweeper_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/minesweeper_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1612.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1612.191 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:33 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1090.152 ; gain = 557.387
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:33 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1090.152 ; gain = 557.387
+Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:33 . Memory (MB): peak = 1612.191 ; gain = 681.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minesweeper.srcs/utils_1/imports/synth_1/ms_game.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 1612.191 ; gain = 681.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 1612.191 ; gain = 681.785
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'scan_state_reg' in module 'ms_keypad'
+INFO: [Synth 8-802] inferred FSM for state register 'ms_init_reg' in module 'ms_game'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                     000000000001 |                             0000
+                 iSTATE4 |                     000000000010 |                             0001
+                 iSTATE1 |                     000000000100 |                             0010
+                  iSTATE |                     000000001000 |                             0011
+                 iSTATE0 |                     000000010000 |                             0100
+                iSTATE10 |                     000000100000 |                             0101
+                 iSTATE9 |                     000001000000 |                             0110
+                 iSTATE7 |                     000010000000 |                             0111
+                 iSTATE8 |                     000100000000 |                             1000
+                 iSTATE6 |                     001000000000 |                             1001
+                 iSTATE3 |                     010000000000 |                             1010
+                 iSTATE2 |                     100000000000 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'scan_state_reg' using encoding 'one-hot' in module 'ms_keypad'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                   mines |                              001 |                              001
+                 numbers |                              010 |                              010
+                    done |                              011 |                              011
+               won_state |                              100 |                              101
+              lost_state |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ms_init_reg' using encoding 'sequential' in module 'ms_game'
+WARNING: [Synth 8-327] inferring latch for variable 'reset_reg' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_top.vhd:116]
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_reg' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/ms_top.vhd:159]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:39 . Memory (MB): peak = 1612.191 ; gain = 681.785
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 16    
+	   2 Input   31 Bit       Adders := 7     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 2     
 +---XORs : 
+	   2 Input     64 Bit         XORs := 1     
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
-	                8 Bit    Registers := 1     
+	               64 Bit    Registers := 7     
+	               32 Bit    Registers := 2     
+	               31 Bit    Registers := 2     
+	               12 Bit    Registers := 6     
+	               10 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 128   
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input    8 Bit        Muxes := 2     
+	   2 Input   64 Bit        Muxes := 12    
+	   3 Input   64 Bit        Muxes := 4     
+	   6 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 3     
+	   6 Input   32 Bit        Muxes := 2     
+	   2 Input   31 Bit        Muxes := 4     
+	  12 Input   12 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	  12 Input    7 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 13    
+	  12 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 4     
+	   6 Input    1 Bit        Muxes := 67    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
-INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
 Part Resources:
 DSPs: 90 (col length:60)
 BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3330] design ms_game has an empty top module
-WARNING: [Synth 8-7129] Port win[1] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port win[0] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port clk in module ms_game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[7] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[6] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[5] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[4] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[2] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key[1] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cursor_x_in[3] in module render is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cursor_y_in[3] in module render is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reset in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[30] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[29] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[28] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[27] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[26] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[25] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[24] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[23] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[22] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[21] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[20] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[19] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[18] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[17] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[16] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[15] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[14] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[13] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[12] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[11] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[10] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[9] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[8] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[7] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[6] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[5] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[4] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[3] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[2] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[1] in module ms_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cursor_x[0] in module ms_game is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (reset_reg) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[30]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[29]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[28]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[27]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[26]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[25]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[24]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[23]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[22]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[21]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[20]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[19]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[18]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[17]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[16]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[15]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[14]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[13]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[12]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[11]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[10]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[9]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[8]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[7]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[6]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[5]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[4]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[3]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[2]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[1]) is unused and will be removed from module minesweeper_top.
+WARNING: [Synth 8-3332] Sequential element (cnt_reg[0]) is unused and will be removed from module minesweeper_top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:01:17 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:41 . Memory (MB): peak = 1612.191 ; gain = 681.785
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:44 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -215,81 +395,211 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:02:10 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:02:10 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:02:12 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:02:12 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:02:12 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:02:12 . Memory (MB): peak = 1612.191 ; gain = 681.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|minesweeper_top | game/ms_synch/d_tmp_reg[2][10] | 3      | 6     | NO           | NO                 | YES               | 6      | 0       | 
+|minesweeper_top | game/ms_rng/cur_seed_reg[55]   | 7      | 5     | YES          | NO                 | YES               | 5      | 0       | 
+|minesweeper_top | game/ms_rng/cur_seed_reg[45]   | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|minesweeper_top | game/ms_rng/cur_seed_reg[39]   | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++----------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+----------------------+----------+
+|      |BlackBox name         |Instances |
++------+----------------------+----------+
+|1     |facing_down_image_rom |         1|
+|2     |facing_down_rcm       |         1|
+|3     |facing_down_gcm       |         1|
+|4     |facing_down_bcm       |         1|
+|5     |bomb                  |         1|
+|6     |bomb_rcm              |         1|
+|7     |bomb_gcm              |         1|
+|8     |bomb_bcm              |         1|
+|9     |flag                  |         1|
+|10    |flag_rcm              |         1|
+|11    |flag_gcm              |         1|
+|12    |flag_bcm              |         1|
+|13    |num_0                 |         1|
+|14    |num_0_rcm             |         1|
+|15    |num_0_gcm             |         1|
+|16    |num_0_bcm             |         1|
+|17    |num_1                 |         1|
+|18    |num_1_rcm             |         1|
+|19    |num_1_gcm             |         1|
+|20    |num_1_bcm             |         1|
+|21    |num_2                 |         1|
+|22    |num_2_rcm             |         1|
+|23    |num_2_gcm             |         1|
+|24    |num_2_bcm             |         1|
+|25    |num_3                 |         1|
+|26    |num_3_rcm             |         1|
+|27    |num_3_gcm             |         1|
+|28    |num_3_bcm             |         1|
+|29    |num_4                 |         1|
+|30    |num_4_rcm             |         1|
+|31    |num_4_gcm             |         1|
+|32    |num_4_bcm             |         1|
+|33    |num_5                 |         1|
+|34    |num_5_rcm             |         1|
+|35    |num_5_gcm             |         1|
+|36    |num_5_bcm             |         1|
+|37    |num_6                 |         1|
+|38    |num_6_rcm             |         1|
+|39    |num_6_gcm             |         1|
+|40    |num_6_bcm             |         1|
+|41    |num_7                 |         1|
+|42    |num_7_rcm             |         1|
+|43    |num_7_gcm             |         1|
+|44    |num_7_bcm             |         1|
+|45    |num_8                 |         1|
+|46    |num_8_rcm             |         1|
+|47    |num_8_gcm             |         1|
+|48    |num_8_bcm             |         1|
++------+----------------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |OBUFT |     2|
-+------+------+------+
-
-Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |     2|
-+------+---------+-------+------+
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |bomb_bbox                  |     1|
+|2     |bomb_bcm_bbox              |     1|
+|3     |bomb_gcm_bbox              |     1|
+|4     |bomb_rcm_bbox              |     1|
+|5     |facing_down_bcm_bbox       |     1|
+|6     |facing_down_gcm_bbox       |     1|
+|7     |facing_down_image_rom_bbox |     1|
+|8     |facing_down_rcm_bbox       |     1|
+|9     |flag_bbox                  |     1|
+|10    |flag_bcm_bbox              |     1|
+|11    |flag_gcm_bbox              |     1|
+|12    |flag_rcm_bbox              |     1|
+|13    |num_0_bbox                 |     1|
+|14    |num_0_bcm_bbox             |     1|
+|15    |num_0_gcm_bbox             |     1|
+|16    |num_0_rcm_bbox             |     1|
+|17    |num_1_bbox                 |     1|
+|18    |num_1_bcm_bbox             |     1|
+|19    |num_1_gcm_bbox             |     1|
+|20    |num_1_rcm_bbox             |     1|
+|21    |num_2_bbox                 |     1|
+|22    |num_2_bcm_bbox             |     1|
+|23    |num_2_gcm_bbox             |     1|
+|24    |num_2_rcm_bbox             |     1|
+|25    |num_3_bbox                 |     1|
+|26    |num_3_bcm_bbox             |     1|
+|27    |num_3_gcm_bbox             |     1|
+|28    |num_3_rcm_bbox             |     1|
+|29    |num_4_bbox                 |     1|
+|30    |num_4_bcm_bbox             |     1|
+|31    |num_4_gcm_bbox             |     1|
+|32    |num_4_rcm_bbox             |     1|
+|33    |num_5_bbox                 |     1|
+|34    |num_5_bcm_bbox             |     1|
+|35    |num_5_gcm_bbox             |     1|
+|36    |num_5_rcm_bbox             |     1|
+|37    |num_6_bbox                 |     1|
+|38    |num_6_bcm_bbox             |     1|
+|39    |num_6_gcm_bbox             |     1|
+|40    |num_6_rcm_bbox             |     1|
+|41    |num_7_bbox                 |     1|
+|42    |num_7_bcm_bbox             |     1|
+|43    |num_7_gcm_bbox             |     1|
+|44    |num_7_rcm_bbox             |     1|
+|45    |num_8_bbox                 |     1|
+|46    |num_8_bcm_bbox             |     1|
+|47    |num_8_gcm_bbox             |     1|
+|48    |num_8_rcm_bbox             |     1|
+|49    |BUFG                       |     2|
+|50    |CARRY4                     |   443|
+|51    |LUT1                       |   244|
+|52    |LUT2                       |   332|
+|53    |LUT3                       |   352|
+|54    |LUT4                       |   420|
+|55    |LUT5                       |   672|
+|56    |LUT6                       |   957|
+|57    |MMCME2_BASE                |     1|
+|58    |MUXF7                      |    68|
+|59    |MUXF8                      |    25|
+|60    |SRL16E                     |    13|
+|61    |FDCE                       |    24|
+|62    |FDPE                       |     8|
+|63    |FDRE                       |  1186|
+|64    |FDSE                       |     5|
+|65    |IBUF                       |     1|
+|66    |IOBUF                      |     3|
+|67    |OBUF                       |    11|
+|68    |OBUFT                      |     4|
++------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:02:12 . Memory (MB): peak = 1612.191 ; gain = 681.785
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 139 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1278.910 ; gain = 746.145
+Synthesis finished with 0 errors, 1 critical warnings and 46 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:02:07 . Memory (MB): peak = 1612.191 ; gain = 580.480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:02:13 . Memory (MB): peak = 1612.191 ; gain = 681.785
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1278.910 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 1612.191 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 540 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1379.488 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1612.191 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
 
-Synth Design complete | Checksum: f3499106
+Synth Design complete | Checksum: 98f3bc55
 INFO: [Common 17-83] Releasing license: Synthesis
-17 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 66 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:36 . Memory (MB): peak = 1379.488 ; gain = 855.422
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1379.488 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minesweeper.runs/synth_1/ms_game.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file ms_game_utilization_synth.rpt -pb ms_game_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 23 16:38:44 2024...
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:02:43 . Memory (MB): peak = 1612.191 ; gain = 1073.352
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1612.191 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minesweeper.runs/synth_1/minesweeper_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file minesweeper_top_utilization_synth.rpt -pb minesweeper_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  1 12:13:49 2024...

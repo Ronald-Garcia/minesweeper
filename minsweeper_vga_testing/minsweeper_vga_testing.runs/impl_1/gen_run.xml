@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1733075433">
+  <File Type="ROUTE-PWR" Name="minesweeper_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="minesweeper_top.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="minesweeper_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="minesweeper_top_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="minesweeper_top_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="minesweeper_top.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="minesweeper_top_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="minesweeper_top_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="minesweeper_top_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="minesweeper_top_opt.dcp"/>
+  <File Type="OPT-DRC" Name="minesweeper_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="minesweeper_top.hwdef"/>
+  <File Type="PWROPT-DCP" Name="minesweeper_top_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="minesweeper_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="minesweeper_top_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="minesweeper_top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="minesweeper_top_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="minesweeper_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="minesweeper_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="minesweeper_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="minesweeper_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="minesweeper_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="minesweeper_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="minesweeper_top.bin"/>
+  <File Type="PLACE-TIMING" Name="minesweeper_top_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="minesweeper_top_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="minesweeper_top_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="minesweeper_top_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="minesweeper_top.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="minesweeper_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="minesweeper_top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="minesweeper_top_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="minesweeper_top.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="minesweeper_top_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="minesweeper_top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="minesweeper_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="minesweeper_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="minesweeper_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="minesweeper_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="minesweeper_top_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="minesweeper_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="minesweeper_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="minesweeper_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="minesweeper_top_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="minesweeper_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="minesweeper_top_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="minesweeper_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="minesweeper_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="minesweeper_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="minesweeper_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="minesweeper_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="minesweeper_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="minesweeper_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="minesweeper_top_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="minesweeper_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="minesweeper_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="minesweeper_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="minesweeper_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="minesweeper_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="minesweeper_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="minesweeper_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="minesweeper_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="minesweeper_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="minesweeper_top.nky"/>
+  <File Type="BITSTR-BMM" Name="minesweeper_top_bd.bmm"/>
+  <File Type="PDI-FILE" Name="minesweeper_top.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="minesweeper_top_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="minesweeper_top_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="minesweeper_top.rcfi"/>
+  <File Type="CFI_FILE" Name="minesweeper_top.cfi"/>
+  <File Type="RNPI_FILE" Name="minesweeper_top.rnpi"/>
+  <File Type="NPI_FILE" Name="minesweeper_top.npi"/>
+  <File Type="RBD_FILE" Name="minesweeper_top.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="minesweeper_top.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="minesweeper_top.sysdef"/>
+  <File Type="BG-BGN" Name="minesweeper_top.bgn"/>
+  <File Type="BG-DRC" Name="minesweeper_top.drc"/>
+  <File Type="RDI-RDI" Name="minesweeper_top.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="minesweeper_top_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="minesweeper_top_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../minesweeper_pkg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ms_game.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ms_keypad.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ms_synchronizer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../render.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rng.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ms_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PIPUSERFILESDIR/ms_synchronizer.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/facing_down.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/facing_down_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/flag_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/flag_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/facing_down_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/3.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/4.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/5.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/6.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/7.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/8.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/flag.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/bomb.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/bomb_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/bomb_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/bomb_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/flag_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../combining coes/0_combined.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/facing_down_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/0_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/0_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/0_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/1_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/1_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/1_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/2_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/2_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/2_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/3_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/3_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/3_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/4_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/4_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/4_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/5_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/5_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/5_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/6_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/6_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/6_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/7_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/7_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/7_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/8_bcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/8_gcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Images/8_rcm.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="minesweeper_top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../lab_f_a7.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/render.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="num_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_8_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_3_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="flag"/>
+  <BlockFileSet Type="BlockSrcs" Name="facing_down_image_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="facing_down_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_0_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="facing_down_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="facing_down_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="bomb"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="bomb_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_5_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="flag_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_6_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="bomb_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="flag_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_0_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="bomb_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_5_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_0_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_1_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_6_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_1_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_1_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_2_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_7_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_2_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_2_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_3_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_3_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_4_bcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_4_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_4_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_5_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_6_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_7_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_7_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_8_gcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="num_8_rcm"/>
+  <BlockFileSet Type="BlockSrcs" Name="flag_gcm"/>
+</GenRun>

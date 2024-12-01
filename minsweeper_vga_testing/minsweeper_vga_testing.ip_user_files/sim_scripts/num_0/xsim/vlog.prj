@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../minsweeper_vga_testing.gen/sources_1/ip/num_0/sim/num_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

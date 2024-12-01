@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="num_4_rcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_4_rcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_5_gcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_5_gcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_5_rcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_5_rcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_6_bcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_6_bcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_6_gcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_6_gcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_6_rcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_6_rcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_7_bcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_7_bcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_7_gcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_7_gcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_7_rcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_7_rcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="num_7_bcm_synth_1"/>
+	</Run>
+	<Run Id="num_8_bcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_8_bcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="num_8_gcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_8_gcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="num_8_bcm_synth_1"/>
+	</Run>
+	<Run Id="num_8_rcm_synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/num_8_rcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="num_8_bcm_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="num_4_rcm_synth_1"/>
+		<Parent Id="num_5_gcm_synth_1"/>
+		<Parent Id="num_5_rcm_synth_1"/>
+		<Parent Id="num_6_bcm_synth_1"/>
+		<Parent Id="num_6_gcm_synth_1"/>
+		<Parent Id="num_6_rcm_synth_1"/>
+		<Parent Id="num_7_bcm_synth_1"/>
+		<Parent Id="num_7_gcm_synth_1"/>
+		<Parent Id="num_7_rcm_synth_1"/>
+		<Parent Id="num_8_bcm_synth_1"/>
+		<Parent Id="num_8_gcm_synth_1"/>
+		<Parent Id="num_8_rcm_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/user/fpga_projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="num_4_rcm_synth_1"/>
+		<Parent Id="num_5_gcm_synth_1"/>
+		<Parent Id="num_5_rcm_synth_1"/>
+		<Parent Id="num_6_bcm_synth_1"/>
+		<Parent Id="num_6_gcm_synth_1"/>
+		<Parent Id="num_6_rcm_synth_1"/>
+		<Parent Id="num_7_bcm_synth_1"/>
+		<Parent Id="num_7_gcm_synth_1"/>
+		<Parent Id="num_7_rcm_synth_1"/>
+		<Parent Id="num_8_bcm_synth_1"/>
+		<Parent Id="num_8_gcm_synth_1"/>
+		<Parent Id="num_8_rcm_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

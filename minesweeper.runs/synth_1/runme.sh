@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ms_game.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ms_game.tcl
+EAStep vivado -log minesweeper_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source minesweeper_top.tcl

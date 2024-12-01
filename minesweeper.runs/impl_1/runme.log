@@ -1,0 +1,151 @@
+
+*** Running vivado
+    with args -log minesweeper_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source minesweeper_top.tcl -notrace
+
+
+
+****** Vivado v2024.1.1 (64-bit)
+  **** SW Build 5094488 on Fri Jun 14 08:59:21 MDT 2024
+  **** IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
+  **** SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
+  **** Start of session at: Sun Dec  1 12:14:01 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source minesweeper_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:36 . Memory (MB): peak = 527.141 ; gain = 239.383
+Command: link_design -top minesweeper_top -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 931.074 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 540 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/lab_f_a7.xdc]
+Finished Parsing XDC File [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/lab_f_a7.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'bomb' instantiated as 'renderer/bomb_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:255]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'bomb_bcm' instantiated as 'renderer/bomb_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:273]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'bomb_gcm' instantiated as 'renderer/bomb_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:267]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'bomb_rcm' instantiated as 'renderer/bomb_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:261]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'facing_down_bcm' instantiated as 'renderer/fd_bcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:248]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'facing_down_gcm' instantiated as 'renderer/fd_gcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:242]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'facing_down_image_rom' instantiated as 'renderer/fd_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:230]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'facing_down_rcm' instantiated as 'renderer/fd_rcm' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:236]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'flag' instantiated as 'renderer/flag_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:280]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'flag_bcm' instantiated as 'renderer/flag_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:298]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'flag_gcm' instantiated as 'renderer/flag_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:292]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'flag_rcm' instantiated as 'renderer/flag_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:286]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_0' instantiated as 'renderer/num_0_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:305]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_0_bcm' instantiated as 'renderer/num_0_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:305]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_0_gcm' instantiated as 'renderer/num_0_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:305]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_0_rcm' instantiated as 'renderer/num_0_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:305]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_1' instantiated as 'renderer/num_1_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:306]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_1_bcm' instantiated as 'renderer/num_1_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:306]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_1_gcm' instantiated as 'renderer/num_1_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:306]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_1_rcm' instantiated as 'renderer/num_1_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:306]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_2' instantiated as 'renderer/num_2_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:307]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_2_bcm' instantiated as 'renderer/num_2_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:307]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_2_gcm' instantiated as 'renderer/num_2_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:307]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_2_rcm' instantiated as 'renderer/num_2_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:307]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_3' instantiated as 'renderer/num_3_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:308]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_3_bcm' instantiated as 'renderer/num_3_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:308]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_3_gcm' instantiated as 'renderer/num_3_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:308]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_3_rcm' instantiated as 'renderer/num_3_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:308]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_4' instantiated as 'renderer/num_4_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:309]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_4_bcm' instantiated as 'renderer/num_4_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:309]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_4_gcm' instantiated as 'renderer/num_4_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:309]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_4_rcm' instantiated as 'renderer/num_4_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:309]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_5' instantiated as 'renderer/num_5_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:310]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_5_bcm' instantiated as 'renderer/num_5_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:310]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_5_gcm' instantiated as 'renderer/num_5_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:310]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_5_rcm' instantiated as 'renderer/num_5_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:310]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_6' instantiated as 'renderer/num_6_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:311]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_6_bcm' instantiated as 'renderer/num_6_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:311]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_6_gcm' instantiated as 'renderer/num_6_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:311]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_6_rcm' instantiated as 'renderer/num_6_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:311]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_7' instantiated as 'renderer/num_7_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:312]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_7_bcm' instantiated as 'renderer/num_7_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:312]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_7_gcm' instantiated as 'renderer/num_7_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:312]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_7_rcm' instantiated as 'renderer/num_7_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:312]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_8' instantiated as 'renderer/num_8_rom' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:313]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_8_bcm' instantiated as 'renderer/num_8_b' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:313]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_8_gcm' instantiated as 'renderer/num_8_g' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:313]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'num_8_rcm' instantiated as 'renderer/num_8_r' [C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/render.vhd:313]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1070.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+
+8 Infos, 0 Warnings, 48 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:37 . Memory (MB): peak = 1070.520 ; gain = 543.379
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/bomb_b' of type 'bomb_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/bomb_g' of type 'bomb_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/bomb_r' of type 'bomb_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/bomb_rom' of type 'bomb' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/fd_bcm' of type 'facing_down_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/fd_gcm' of type 'facing_down_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/fd_rcm' of type 'facing_down_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/fd_rom' of type 'facing_down_image_rom' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/flag_b' of type 'flag_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/flag_g' of type 'flag_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/flag_r' of type 'flag_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/flag_rom' of type 'flag' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_0_b' of type 'num_0_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_0_g' of type 'num_0_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_0_r' of type 'num_0_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_0_rom' of type 'num_0' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_1_b' of type 'num_1_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_1_g' of type 'num_1_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_1_r' of type 'num_1_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_1_rom' of type 'num_1' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_2_b' of type 'num_2_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_2_g' of type 'num_2_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_2_r' of type 'num_2_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_2_rom' of type 'num_2' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_3_b' of type 'num_3_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_3_g' of type 'num_3_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_3_r' of type 'num_3_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_3_rom' of type 'num_3' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_4_b' of type 'num_4_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_4_g' of type 'num_4_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_4_r' of type 'num_4_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_4_rom' of type 'num_4' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_5_b' of type 'num_5_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_5_g' of type 'num_5_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_5_r' of type 'num_5_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_5_rom' of type 'num_5' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_6_b' of type 'num_6_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_6_g' of type 'num_6_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_6_r' of type 'num_6_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_6_rom' of type 'num_6' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_7_b' of type 'num_7_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_7_g' of type 'num_7_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_7_r' of type 'num_7_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_7_rom' of type 'num_7' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_8_b' of type 'num_8_bcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_8_g' of type 'num_8_gcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_8_r' of type 'num_8_rcm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'renderer/num_8_rom' of type 'num_8' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+INFO: [Project 1-461] DRC finished with 48 Errors, 4 Warnings
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1100.086 ; gain = 29.566
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 0 Warnings, 48 Critical Warnings and 49 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  1 12:15:25 2024...
