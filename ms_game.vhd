@@ -245,7 +245,7 @@ begin
                    ((tr_cell >= 0) and (tr_cell mod 8 /= 0) and reveal_map(tr_cell)='1' and number_map(tr_cell)=b"0000") or 
                    ((bl_cell < 64) and (bl_cell mod 8 /= 7) and reveal_map(bl_cell)='1' and number_map(bl_cell)=b"0000") or
                    (br_cell < 64 and (br_cell mod 8 /= 0) and reveal_map(br_cell)='1' and number_map(br_cell)=b"0000") then
-                    reveal_map(i) <= '1';
+                    reveal_map(i) <= not flag_map(i);
                 end if;
             end loop;
         end if;
