@@ -218,6 +218,7 @@ begin
         variable tl_cell: integer := 0;
         variable bl_cell: integer := 0;
         variable br_cell: integer := 0;
+        variable cnt_solve: integer := 0;
     begin
         
         if ms_init=DONE then
@@ -248,11 +249,51 @@ begin
                 end if;
             end loop;
         end if;
+        
         if rising_edge(clk) then
             if start_init ='1' and ms_init /= IDLE then
                 start_init <= '0';
             end if;
+            
         
+            if button_map(11)='1' and cnt_solve =0 then
+                cnt_solve := 0;
+                -- for each cell
+                for i in 0 to 63 loop
+                    
+                    -- if this cell is revealed and is a 0
+                    -- calculate the index of all the surrounding cells
+                    l_cell  := i-1;
+                    r_cell  := i + 1;
+                    t_cell  := i - 8;
+                    b_cell  := i + 8;
+                    tl_cell := i - 9;
+                    tr_cell := i - 7;
+                    bl_cell := i + 7;
+                    br_cell := i + 9;
+                    
+                    -- reveal all surrounding cells.
+                    if ((l_cell >= 0 and (l_cell mod 8 /= 7)) and reveal_map(l_cell)='1') or
+                       ((r_cell < 64 and (r_cell mod 8 /= 0)) and reveal_map(r_cell)='1') or
+                       (b_cell < 64 and reveal_map(b_cell)='1') or
+                       (t_cell >= 0 and reveal_map(t_cell)='1') or
+                       (tl_cell >= 0 and (tl_cell mod 8 /= 7) and reveal_map(tl_cell)='1') or
+                       ((tr_cell >= 0) and (tr_cell mod 8 /= 0) and reveal_map(tr_cell)='1') or 
+                       ((bl_cell < 64) and (bl_cell mod 8 /= 7) and reveal_map(bl_cell)='1') or
+                       (br_cell < 64 and (br_cell mod 8 /= 0) and reveal_map(br_cell)='1') then
+                        flag_map(i) <= mine_map(i);
+                        reveal_map(i) <= not flag_map(i) and not mine_map(i);
+                    end if;
+                end loop;
+            
+            end if;
+            
+            if cnt_solve=12000000 then
+                cnt_solve := 0;
+            else 
+                cnt_solve := cnt_solve + 1;
+            end if;
+
             -- up button
             if re_button_map(10)='1' then
                 if cursor_y_i=0 then            
@@ -295,6 +336,16 @@ begin
                 flag_map(cursor_x_i + cursor_y_i * 8) <= not flag_map(cursor_x_i + cursor_y_i * 8) and not reveal_map(cursor_x_i + 8 * cursor_y_i);
             end if;
             
+            -- reset button
+            if re_button_map(9) = '1' then
+                start_init <= '1';
+                lose <= '0';
+                reveal_map <= (others => '0');
+                flag_map <= (others => '0');
+            end if;
+            
+            
+            
             -- click button
             if re_button_map(7)='1' then
                 cur_i := cursor_x_i + 8 * cursor_y_i;  -- Calculate current tile index
@@ -322,6 +373,8 @@ begin
             end if;
         end if;       
     end process;
+    
+    
     
     process(reveal_map, mine_map) 
     begin

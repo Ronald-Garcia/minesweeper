@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="num_5_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1733075336">
   <File Type="PA-TCL" Name="num_5.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="num_5_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="num_5_reports.tcl"/>
   <File Type="RDS-RDS" Name="num_5.vds"/>
   <File Type="RDS-UTIL" Name="num_5_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="num_5_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="num_5.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="num_5_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="num_5_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/num_5" RelGenDir="$PGENDIR/num_5">
     <File Path="$PSRCDIR/sources_1/ip/num_5/num_5.xci">
       <FileInfo>

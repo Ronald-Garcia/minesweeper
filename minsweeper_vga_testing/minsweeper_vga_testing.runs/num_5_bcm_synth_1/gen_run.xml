@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="num_5_bcm_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1733075405">
   <File Type="PA-TCL" Name="num_5_bcm.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="num_5_bcm_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="num_5_bcm_reports.tcl"/>
   <File Type="RDS-RDS" Name="num_5_bcm.vds"/>
   <File Type="RDS-UTIL" Name="num_5_bcm_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="num_5_bcm_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="num_5_bcm.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="num_5_bcm_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="num_5_bcm_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/num_5_bcm" RelGenDir="$PGENDIR/num_5_bcm">
     <File Path="$PSRCDIR/sources_1/ip/num_5_bcm/num_5_bcm.xci">
       <FileInfo>

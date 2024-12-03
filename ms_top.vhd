@@ -114,8 +114,8 @@ begin
     game: ms_game port map(
         clk         => clk,
         reset      => reset,
-        win        => win_status,
         button_map => button_map,
+        win        => win_status,
         mine_map_o   => mine_map,
         reveal_map_o => reveal_map,
         flag_map_o   => flag_map,
@@ -156,12 +156,15 @@ begin
         variable cnt: natural := 0;
     begin
     
-        if cnt = 3 then
-            reset <= '0';
-        else
-            cnt := cnt + 1;
+        if rising_edge(clk) then
+            if cnt = 3 then
+                reset <= '0';
+            else
+                cnt := cnt + 1;
+                reset <= '1';
+            end if;
         end if;
-    
+        
         
     
     end process;

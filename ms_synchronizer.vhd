@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity synch is
     port(
@@ -12,15 +13,26 @@ end entity;
 
 architecture arch of synch is
     -- clk, d_ext and d_re are port signals
-    type sr is array(3 downto 0) of std_logic_vector(11 downto 0);
-    signal d_tmp: sr;
+    type cnt_arr is array(11 downto 0) of unsigned(63 downto 0);
+    signal d_in_1: std_logic_vector(11 downto 0);
+    signal d_in_2: std_logic_vector(11 downto 0);
+    signal d_in_3: std_logic_vector(11 downto 0);
+    signal d_out: std_logic_vector(11 downto 0);
+    signal cnt_debounce: cnt_arr := (others => (others => '0'));
+    signal d_out_prev: std_logic_vector(11 downto 0);
+    
     begin
 
-        process(clk,d_tmp)
+        process(clk)
+            variable d_cur : std_logic_vector(11 downto 0);
         begin
-            d_re<=d_tmp(2) and (not d_tmp(3));
+            -- Metastability shift registers for all buttons
             if rising_edge(clk) then
-                d_tmp<=d_tmp(2 downto 0)&d_in;
+                d_in_1 <= d_in;
+                d_in_2 <= d_in_1;
+                d_in_3 <= d_in_2;
+                d_re <= d_in_3 and not d_in_2;
             end if;
+            
         end process;
 end arch;

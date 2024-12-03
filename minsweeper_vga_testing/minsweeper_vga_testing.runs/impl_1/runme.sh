@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/impl_1'
+HD_PWD='C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

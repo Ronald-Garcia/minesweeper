@@ -14,7 +14,7 @@ end ms_keypad;
 
 architecture arch of ms_keypad is
     -- Constants for timing
-    constant SCAN_INTERVAL: integer := 120; -- 10 μs at 12 MHz clock
+    constant SCAN_INTERVAL: integer := 900; -- 10 μs at 12 MHz clock
     
     -- Internal signals
     signal counter: integer range 0 to SCAN_INTERVAL-1;

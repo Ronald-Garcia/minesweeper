@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/impl_1/minesweeper_top.tcl"
+  variable script "C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.runs/impl_1/minesweeper_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,6 +97,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -105,6 +106,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
@@ -114,63 +116,63 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.cache/wt [current_project]
-  set_property parent.project_path C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.xpr [current_project]
-  set_property ip_output_repo C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.cache/wt [current_project]
+  set_property parent.project_path C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.xpr [current_project]
+  set_property ip_output_repo C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/minesweeper_top.dcp
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/facing_down_image_rom/facing_down_image_rom.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/facing_down_gcm/facing_down_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/facing_down_rcm/facing_down_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/facing_down_bcm/facing_down_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_6/num_6.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/flag/flag.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_1/num_1.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_0/num_0.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_5/num_5.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_7/num_7.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_4/num_4.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/bomb/bomb.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_8/num_8.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_3/num_3.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_2/num_2.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/bomb_rcm/bomb_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/flag_bcm/flag_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/bomb_bcm/bomb_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/flag_rcm/flag_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/bomb_gcm/bomb_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_0_rcm/num_0_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_0_gcm/num_0_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_0_bcm/num_0_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_1_rcm/num_1_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_1_gcm/num_1_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_1_bcm/num_1_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_2_bcm/num_2_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_2_gcm/num_2_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_2_rcm/num_2_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_3_bcm/num_3_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_3_gcm/num_3_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_3_rcm/num_3_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_4_bcm/num_4_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_4_gcm/num_4_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_4_rcm/num_4_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_5_bcm/num_5_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_5_gcm/num_5_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_5_rcm/num_5_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_6_bcm/num_6_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_6_gcm/num_6_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_6_rcm/num_6_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_7_bcm/num_7_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_7_gcm/num_7_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_7_rcm/num_7_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_8_bcm/num_8_bcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_8_gcm/num_8_gcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_8_rcm/num_8_rcm.xci
-  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/flag_gcm/flag_gcm.xci
+  add_files -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.runs/synth_1/minesweeper_top.dcp
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/facing_down_image_rom/facing_down_image_rom.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/facing_down_gcm/facing_down_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/facing_down_rcm/facing_down_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/facing_down_bcm/facing_down_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_6/num_6.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/flag/flag.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_1/num_1.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_0/num_0.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_5/num_5.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_7/num_7.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_4/num_4.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/bomb/bomb.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_8/num_8.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_3/num_3.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_2/num_2.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/bomb_rcm/bomb_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/flag_bcm/flag_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/bomb_bcm/bomb_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/flag_rcm/flag_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/bomb_gcm/bomb_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_0_rcm/num_0_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_0_gcm/num_0_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_0_bcm/num_0_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_1_rcm/num_1_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_1_gcm/num_1_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_1_bcm/num_1_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_2_bcm/num_2_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_2_gcm/num_2_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_2_rcm/num_2_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_3_bcm/num_3_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_3_gcm/num_3_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_3_rcm/num_3_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_4_bcm/num_4_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_4_gcm/num_4_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_4_rcm/num_4_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_5_bcm/num_5_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_5_gcm/num_5_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_5_rcm/num_5_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_6_bcm/num_6_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_6_gcm/num_6_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_6_rcm/num_6_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_7_bcm/num_7_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_7_gcm/num_7_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_7_rcm/num_7_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_8_bcm/num_8_bcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_8_gcm/num_8_gcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/num_8_rcm/num_8_rcm.xci
+  read_ip -quiet C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/minsweeper_vga_testing/minsweeper_vga_testing.srcs/sources_1/ip/flag_gcm/flag_gcm.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minessweeper_vga_testing/lab_f_a7.xdc
+  read_xdc C:/Users/rgarc/OneDrive/Desktop/FPGA/projects/minesweeper/lab_f_a7.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

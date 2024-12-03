@@ -218,6 +218,17 @@ signal num_blues  : pixel_array;
     -- Current cursor position
     signal cursor_x : integer range 0 to 7 := 0;
     signal cursor_y : integer range 0 to 7 := 0;
+    
+--    type sr_64 is array(2 downto 0) of std_logic_vector(63 downto 0);
+--    type sr_number is array(2 downto 0) of number_array;
+--    type sr_4 is array(2 downto 0) of std_logic_vector(3 downto 0);
+--    signal mine_map_infx_sr   : sr_64 := (others => (others => '0'));
+--    signal reveal_map_infx_sr : sr_64 := (others => (others => '0'));
+--    signal flag_map_infx_sr   : sr_64 := (others => (others => '0'));
+--    signal number_map_infx_sr : sr_number := (others => (others => b"0000"));
+--    signal cursor_x_infx_sr   : sr_4 := (others => (others => '0'));
+--    signal cursor_y_infx_sr   : sr_4 := (others => (others => '0'));
+
 
 begin
     -- Default tx value
@@ -495,14 +506,20 @@ begin
     
     process (clkfx)
     begin
+        
         if rising_edge(clkfx) then
+        
             mine_map_infx <= mine_map_in;
             reveal_map_infx <= reveal_map_in;
             flag_map_infx <= flag_map_in;
             number_map_infx <= number_map_in;    
             cursor_x_infx <= cursor_x_in;
-            cursor_y_infx <= cursor_y_in;                
+            cursor_y_infx <= cursor_y_in;
+            
+                          
         end if;
     end process;
+    
+   
 
 end behavioral;
