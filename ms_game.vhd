@@ -256,7 +256,7 @@ begin
             end if;
             
         
-            if button_map(11)='1' and cnt_solve =0 then
+            if button_map(0)='1' and cnt_solve =0 then
                 cnt_solve := 0;
                 -- for each cell
                 for i in 0 to 63 loop
@@ -337,7 +337,7 @@ begin
             end if;
             
             -- reset button
-            if re_button_map(9) = '1' then
+            if re_button_map(2) = '1' then
                 start_init <= '1';
                 lose <= '0';
                 reveal_map <= (others => '0');
