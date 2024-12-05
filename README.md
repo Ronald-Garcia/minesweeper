@@ -16,13 +16,13 @@ Keypad mapping:
 Note: 1,3,7,9 are unused.
 
 The button mappings on the keypad follow these ports as depicted in the constraints file (lab_07_f.xdc)
-PACKAGE_PIN M3 to  key[1] }]; 
-PACKAGE_PIN L3 to  key[2] }]; 
-PACKAGE_PIN A16 to  key[3] }]; 
-PACKAGE_PIN K3 to  key[4] }]; 
-PACKAGE_PIN C15 to  key[5] }]; 
-PACKAGE_PIN H1 to  key[6] }]; 
-PACKAGE_PIN A15 to  key[7] }]; 
+ - PACKAGE_PIN M3 to  key[1] }]; 
+ - PACKAGE_PIN L3 to  key[2] }]; 
+ - PACKAGE_PIN A16 to  key[3] }]; 
+ - PACKAGE_PIN K3 to  key[4] }]; 
+ - PACKAGE_PIN C15 to  key[5] }]; 
+ - PACKAGE_PIN H1 to  key[6] }]; 
+ - PACKAGE_PIN A15 to  key[7] }]; 
 
 To play:
 - Press 5 to initialise mine placement.
