@@ -15,7 +15,7 @@ Keypad mapping:
 
 Note: 1,3,7,9 are unused.
 
-The button mappings on the keypad follow these ports as depicted in the constraints file (lab_07_f.xdc)
+The button mappings on the keypad follow these ports as depicted in the constraints file (lab_f_a7.xdc)
  - PACKAGE_PIN M3 to  key[1] }]; 
  - PACKAGE_PIN L3 to  key[2] }]; 
  - PACKAGE_PIN A16 to  key[3] }]; 
