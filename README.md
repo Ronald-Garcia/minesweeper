@@ -18,3 +18,7 @@ Note: 1,3,7,9 are unused.
 To play:
 - Press 5 to initialise mine placement.
 - Play the game normally. 
+
+References:
+-  COE files: https://github.com/hukenovs/MinesweeperFPGA
+-  VGA text display: https://github.com/MadLittleMods/FP-V-GA-Text
